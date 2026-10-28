@@ -2,6 +2,8 @@
 
 **A single-issue, five-stage RV32IMC FPGA soft processor delivering 3.442 CoreMark/MHz.**
 
+PaceRV achieves **state-of-the-art CoreMark/MHz performance among the surveyed single-issue, five-stage RV32IMC FPGA soft processors**, while retaining a complete SoC peripheral and monitoring subsystem. The [dated comparison](docs/performance-context.md) identifies the verified results and their measurement scope.
+
 PaceRV studies how memory-request admission affects the reuse of arithmetic prepared ahead of execution. It combines a compressed-instruction front end, branch prediction, private instruction/data caches, machine-mode CSRs, and UART/GPIO peripherals in a complete FPGA system. The SystemVerilog implementation and its board-qualified Base and Retained configurations are released here under MIT; third-party components retain their own licenses.
 
 **The 3.442 CoreMark/MHz result retains the complete SoC and its peripherals.** It is measured with instruction/data caches, backing RAM, UART, GPIO, a 64-bit timer, interrupts, machine CSRs, and live performance monitoring present in the implemented system.

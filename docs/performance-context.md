@@ -27,4 +27,8 @@ Sources:
 
 Within the matching FPGA implementations with numerical results verified in this search, PaceRV has the highest reported CoreMark/MHz. The release introduction states the measured **3.442 CoreMark/MHz** result; this dated comparison is not an exhaustive world-record certification. AIRISC's official brochure confirms five-stage RV32IMC FPGA implementations but does not provide a numerical CoreMark/MHz score, so its ranking remains unresolved.
 
+Accordingly, the introduction uses **state-of-the-art performance among the surveyed implementations**. The scope is single-issue, five-stage, RV32IMC FPGA soft processors, not all RISC-V processors, all FPGA processors, or all resource-efficiency measures.
+
+Search and acquisition used the local Browser Search workflow and NJU literature access tool. Google navigation was intermittently reset; the NJU search therefore returned Crossref metadata. Browser Search acquired the public matching-core repository, and upstream repository/API reads verified the numerical README results. Metadata-only records and a firewall-blocked Korean paper were not treated as verified performance evidence.
+
 AIRISC source: https://www.ims.fraunhofer.de/content/dam/ims/de/documents/Downloads/AIRISC%20-%20RISC-V%20CORESAIRISC%20CORES.pdf
