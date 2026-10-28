@@ -1,0 +1,7 @@
+/.work/
+/.venv/
+__pycache__/
+*.pyc
+*.vvp
+/vendor-local/
+/.camera-ready-export.pdf

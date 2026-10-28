@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use PaceRV, please cite the associated MCSoC 2026 paper."
+title: "PaceRV: a single-issue five-stage RV32IMC FPGA soft processor"
+type: software
+version: 1.0.0
+date-released: 2026-10-28
+license: MIT
+repository-code: "https://github.com/BXSYGJ/PaceRV"
+authors:
+  - family-names: Dai
+    given-names: Yihang
+preferred-citation:
+  type: conference-paper
+  title: "Memory Admission and Result-Retention Sizing in an RV32IMC FPGA Soft Processor"
+  authors:
+    - family-names: Dai
+      given-names: Yihang
+    - family-names: Xu
+      given-names: Shuyu
+    - family-names: Zhou
+      given-names: Yinfeng
+    - family-names: Peng
+      given-names: Chenglei
+  year: 2026
+  conference:
+    name: "19th IEEE International Symposium on Embedded Multicore/Many-core Systems-on-Chip (MCSoC)"

@@ -1,0 +1,7 @@
+{
+  "cpu\\sw\\coremark\\core_portme.c": "6247cc3d819c2d99f2bbeec18cb797b58059b5651e3163d80157a89ee4e6f05b",
+  "cpu\\sw\\coremark\\core_portme.h": "312f91ab6c7af1104e7e0e6c19453ecea692806272a6d8ffc943165ac376535d",
+  "cpu\\sw\\coremark\\ee_printf.c": "0a1c72163fc891dfb3e21144a5e9add7edece211fa4beddde5d206f46df34ede",
+  "cpu\\sw\\platform.h": "567727970a13611d098eb4e1c9c4fe55a8d0c18ec3c5d3de2c7b4e4713fcc165",
+  "cpu_paper\\ports\\embench\\sim_main.cpp": "24268cfa411021f93f11f246b7c7bedb6aa4df2ae35d21bd99298f54a47428ab"
+}

@@ -1,0 +1,308 @@
+{
+  "schema": "portable-qualified-core/v1",
+  "release": "H3_Base_145125",
+  "clock_hz": 145125000,
+  "iterations": 6000,
+  "uart_baud": 9600,
+  "clock_uncertainty_ns": 0.15,
+  "device": "PG2L200H",
+  "speedgrade": "-6",
+  "package": "FBB676",
+  "roles": {
+    "V0": {
+      "physical_manifest_sha256": "27e3f05fefe85adfa9aa45bf95eb290bc0e0b5c66476c969039a3391a055ae02",
+      "physical_inputs": "physical/V0/inputs",
+      "pnr_options": "-dc_duplication false -plc_decongestion 0 -gplace_seed 2 -logic_optimize_lut6d_combing_strategy 3",
+      "firmware_argv": [
+        "-march=rv32imc",
+        "-mabi=ilp32",
+        "-mcmodel=medany",
+        "-msmall-data-limit=0",
+        "-std=c11",
+        "-O3",
+        "-funroll-loops",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-DTOTAL_DATA_SIZE=2000",
+        "-DITERATIONS=6000",
+        "-DVALIDATION_RUN=0",
+        "-DPERFORMANCE_RUN=1",
+        "-DCPU_CLOCK_HZ=145125000u",
+        "-DCONSOLE_DELAY_CYCLES=0",
+        "-DFLAGS_STR=\"-march=rv32imc -mabi=ilp32 -mcmodel=medany -msmall-data-limit=0 -std=c11 -O3 -funroll-loops -ffreestanding -fno-builtin -ffunction-sections -fdata-sections -Wall -Wextra -DTOTAL_DATA_SIZE=2000 -DITERATIONS=6000 -DVALIDATION_RUN=0 -DPERFORMANCE_RUN=1 -DCPU_CLOCK_HZ=145125000u -DCONSOLE_DELAY_CYCLES=0\"",
+        "-I",
+        "{RELEASE}/firmware/V0/inputs/port",
+        "-I",
+        "{RELEASE}/firmware/V0/inputs/coremark",
+        "-nostdlib",
+        "-nostartfiles",
+        "-Wl,--relax",
+        "-Wl,--gc-sections",
+        "-Wl,-Map=firmware.map",
+        "-T",
+        "{RELEASE}/firmware/V0/inputs/startup/link_soc.ld",
+        "-o",
+        "{OUTPUT}/firmware.elf",
+        "{RELEASE}/firmware/V0/inputs/coremark/core_main.c",
+        "{RELEASE}/firmware/V0/inputs/coremark/core_list_join.c",
+        "{RELEASE}/firmware/V0/inputs/coremark/core_matrix.c",
+        "{RELEASE}/firmware/V0/inputs/coremark/core_state.c",
+        "{RELEASE}/firmware/V0/inputs/coremark/core_util.c",
+        "{RELEASE}/firmware/V0/inputs/port/core_portme.c",
+        "{RELEASE}/firmware/V0/inputs/port/ee_printf.c",
+        "{RELEASE}/firmware/V0/inputs/startup/start.S",
+        "-lgcc"
+      ],
+      "firmware_hex": "firmware/V0/firmware.hex",
+      "firmware_sha256": "3a3aff510511ed4cd7fe304a6354861adae30531102446a24438e43f3e2a2884",
+      "reference_uart": "firmware/V0/uart.log",
+      "reference_uart_sha256": "1c9f93a53d018f363654d79a82e297ac4b128f3a692e98a40f9b8484306f9f90",
+      "bitstream": "bitstreams/V0.sbit",
+      "bitstream_sha256": "898bdb6b730cde60619455677f6d8cc77d93549fd77493e2a3a12b45bf238a5b",
+      "board_originals": [
+        {
+          "sha256": "0e91d2ad6f50c9415c25668d41e8eaff3c286caed000b7dd8664fe9ec06a364e",
+          "portable": "board-references/V0/cold-1.bin"
+        },
+        {
+          "sha256": "0e91d2ad6f50c9415c25668d41e8eaff3c286caed000b7dd8664fe9ec06a364e",
+          "portable": "board-references/V0/cold-2.bin"
+        },
+        {
+          "sha256": "0e91d2ad6f50c9415c25668d41e8eaff3c286caed000b7dd8664fe9ec06a364e",
+          "portable": "board-references/V0/cold-3.bin"
+        }
+      ]
+    },
+    "V1": {
+      "physical_manifest_sha256": "af617ef134127c6a6c3c7f53791f4a37c0c08e47a2f0849d103416bccc341d83",
+      "physical_inputs": "physical/V1/inputs",
+      "pnr_options": "-dc_duplication false -plc_decongestion 0 -gplace_seed 2 -logic_optimize_lut6d_combing_strategy 3",
+      "firmware_argv": [
+        "-march=rv32imc",
+        "-mabi=ilp32",
+        "-mcmodel=medany",
+        "-msmall-data-limit=0",
+        "-std=c11",
+        "-O3",
+        "-funroll-loops",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-DTOTAL_DATA_SIZE=2000",
+        "-DITERATIONS=6000",
+        "-DVALIDATION_RUN=1",
+        "-DPERFORMANCE_RUN=0",
+        "-DCPU_CLOCK_HZ=145125000u",
+        "-DCONSOLE_DELAY_CYCLES=0",
+        "-DFLAGS_STR=\"-march=rv32imc -mabi=ilp32 -mcmodel=medany -msmall-data-limit=0 -std=c11 -O3 -funroll-loops -ffreestanding -fno-builtin -ffunction-sections -fdata-sections -Wall -Wextra -DTOTAL_DATA_SIZE=2000 -DITERATIONS=6000 -DVALIDATION_RUN=1 -DPERFORMANCE_RUN=0 -DCPU_CLOCK_HZ=145125000u -DCONSOLE_DELAY_CYCLES=0\"",
+        "-I",
+        "{RELEASE}/firmware/V1/inputs/port",
+        "-I",
+        "{RELEASE}/firmware/V1/inputs/coremark",
+        "-nostdlib",
+        "-nostartfiles",
+        "-Wl,--relax",
+        "-Wl,--gc-sections",
+        "-Wl,-Map=firmware.map",
+        "-T",
+        "{RELEASE}/firmware/V1/inputs/startup/link_soc.ld",
+        "-o",
+        "{OUTPUT}/firmware.elf",
+        "{RELEASE}/firmware/V1/inputs/coremark/core_main.c",
+        "{RELEASE}/firmware/V1/inputs/coremark/core_list_join.c",
+        "{RELEASE}/firmware/V1/inputs/coremark/core_matrix.c",
+        "{RELEASE}/firmware/V1/inputs/coremark/core_state.c",
+        "{RELEASE}/firmware/V1/inputs/coremark/core_util.c",
+        "{RELEASE}/firmware/V1/inputs/port/core_portme.c",
+        "{RELEASE}/firmware/V1/inputs/port/ee_printf.c",
+        "{RELEASE}/firmware/V1/inputs/startup/start.S",
+        "-lgcc"
+      ],
+      "firmware_hex": "firmware/V1/firmware.hex",
+      "firmware_sha256": "a5170241896b64c96d050d7f2f9d0059155aa9d13defdac8aecd52e27b159cdd",
+      "reference_uart": "firmware/V1/uart.log",
+      "reference_uart_sha256": "45c552e137238e58b23a8fa268fcd180d8a972fbb0a60c913ee5e265dac5d6dc",
+      "bitstream": "bitstreams/V1.sbit",
+      "bitstream_sha256": "17dfe411be998fbd9e590574a4d78a471f85575ebf513c0c5f3b53e913a166b4",
+      "board_originals": [
+        {
+          "sha256": "c183b4f8003f48d96c1503bb662f6e255a050053b5b786347553e5df0f9421c9",
+          "portable": "board-references/V1/cold-1.bin"
+        },
+        {
+          "sha256": "c183b4f8003f48d96c1503bb662f6e255a050053b5b786347553e5df0f9421c9",
+          "portable": "board-references/V1/cold-2.bin"
+        },
+        {
+          "sha256": "c183b4f8003f48d96c1503bb662f6e255a050053b5b786347553e5df0f9421c9",
+          "portable": "board-references/V1/cold-3.bin"
+        }
+      ]
+    }
+  },
+  "source_copies": [],
+  "simulation": {
+    "argv": [
+      "--cc",
+      "--exe",
+      "--build",
+      "--timing",
+      "--Wall",
+      "-Wno-fatal",
+      "-j",
+      "2",
+      "-MAKEFLAGS",
+      "OPT_FAST=-O3",
+      "--top-module",
+      "rv32_observed_soc",
+      "--Mdir",
+      "{OUTPUT}/objects",
+      "-CFLAGS",
+      "-O3 -std=c++20",
+      "-GCLOCK_HZ=3200",
+      "-GBAUD=100",
+      "-GINIT_FILE=\"firmware.hex\"",
+      "-GENABLE_M=1",
+      "-GENABLE_C=1",
+      "-GENABLE_PREDICTOR=1",
+      "-GLOAD_USE_BUBBLE=1",
+      "-GFAST_ICACHE_HIT=1",
+      "-GFAST_DCACHE_READ=1",
+      "-GFAST_DCACHE_WRITE=1",
+      "-GFETCH_OVERLAP=1",
+      "-GDATA_OVERLAP=1",
+      "-GEARLY_D_REQUEST=1",
+      "-GBTB_INDEX_BITS=8",
+      "-GICACHE_SET_BITS=9",
+      "-GCACHE_SET_BITS=6",
+      "-GENABLE_CACHE=1",
+      "-GMEMORY_ADDRESS_BITS=14",
+      "-GNATIVE_SNAPSHOT=1",
+      "{RELEASE}/simulation/inputs/rtl/rv32_alu.sv",
+      "{RELEASE}/simulation/inputs/rtl/rv32_btb.sv",
+      "{RELEASE}/simulation/inputs/rtl/rv32_burst_arbiter.sv",
+      "{RELEASE}/simulation/inputs/rtl/rv32_burst_ram.sv",
+      "{RELEASE}/simulation/inputs/rtl/rv32_cache.sv",
+      "{RELEASE}/simulation/inputs/rtl/rv32_core.sv",
+      "{RELEASE}/simulation/inputs/rtl/rv32_decode.sv",
+      "{RELEASE}/simulation/inputs/rtl/rv32_fifo.sv",
+      "{RELEASE}/simulation/inputs/rtl/rv32_machine.sv",
+      "{RELEASE}/simulation/inputs/rtl/rv32_memory_system.sv",
+      "{RELEASE}/simulation/inputs/rtl/rv32_muldiv.sv",
+      "{RELEASE}/simulation/inputs/rtl/rv32_peripherals.sv",
+      "{RELEASE}/simulation/inputs/rtl/rv32_rvc_expand.sv",
+      "{RELEASE}/simulation/inputs/rtl/rv32_rvc_frontend.sv",
+      "{RELEASE}/simulation/inputs/rtl/rv32_soc.sv",
+      "{RELEASE}/simulation/inputs/rtl/rv32_uart.sv",
+      "{RELEASE}/simulation/inputs/rtl/rv32_uncached.sv",
+      "{RELEASE}/simulation/inputs/sim/native_selected_observer.sv",
+      "{VENDOR}/GTP_DRM36K_E1.v",
+      "{VENDOR}/GTP_GRS.v",
+      "{RELEASE}/simulation/inputs/sim/native_driver.cpp"
+    ],
+    "sources": [
+      {
+        "portable": "simulation/inputs/rtl/rv32_alu.sv",
+        "sha256": "125647d90b98f294743127637406d19479eebda82dccfaaba7acaf59d5ae38b1"
+      },
+      {
+        "portable": "simulation/inputs/rtl/rv32_btb.sv",
+        "sha256": "b1b3481343a2e1275cfd984c4eab05c5f9d92cb72dab652010463073eb86eb4f"
+      },
+      {
+        "portable": "simulation/inputs/rtl/rv32_burst_arbiter.sv",
+        "sha256": "82104b39f85d2942e3d0a6780f79099062cc5a4f71fdf87491191de2f632c8af"
+      },
+      {
+        "portable": "simulation/inputs/rtl/rv32_burst_ram.sv",
+        "sha256": "089b3788fa87d3176a4e0b09e40382e1349cc33e8f9d2227d567ad0788672417"
+      },
+      {
+        "portable": "simulation/inputs/rtl/rv32_cache.sv",
+        "sha256": "c9d73d59e80a70399df214dfbbe3316083e6df0d33974e1564795a4ae875d6c1"
+      },
+      {
+        "portable": "simulation/inputs/rtl/rv32_core.sv",
+        "sha256": "15f86ba74e955ce93c3937106c7650d367b0b6249ed8799e3b373f34f31da404"
+      },
+      {
+        "portable": "simulation/inputs/rtl/rv32_decode.sv",
+        "sha256": "9cb2b57b46ed775d85b6e70a3eebe92c2d5e49e9a6483993109e2c096d9a3ff3"
+      },
+      {
+        "portable": "simulation/inputs/rtl/rv32_fifo.sv",
+        "sha256": "20bb573cdbae386a8b44df780eefc11b85323cf2bbaa4fb2073a5e87e626b2eb"
+      },
+      {
+        "portable": "simulation/inputs/rtl/rv32_machine.sv",
+        "sha256": "56b542e419c58216a08b0a5c83322506e42e2721fa28db50a6454ebe29607abd"
+      },
+      {
+        "portable": "simulation/inputs/rtl/rv32_memory_system.sv",
+        "sha256": "39833ea3b440e8c4d8f2e54f3382280b32456744f394f317c2c9ca17235acd39"
+      },
+      {
+        "portable": "simulation/inputs/rtl/rv32_muldiv.sv",
+        "sha256": "64df4940f2d309fa68e8183f5ed1825e8843046703bf5f34ec8b885b03532246"
+      },
+      {
+        "portable": "simulation/inputs/rtl/rv32_peripherals.sv",
+        "sha256": "d4acd7818f67cf5466e04e94307da420fa3bd004225a0633b7be35a1babeae8e"
+      },
+      {
+        "portable": "simulation/inputs/rtl/rv32_rvc_expand.sv",
+        "sha256": "308ac8a65c9e29aeec27b38417483d0f43fd7c54487c26e89a3fa54b4647951b"
+      },
+      {
+        "portable": "simulation/inputs/rtl/rv32_rvc_frontend.sv",
+        "sha256": "210b5ba9280c3840aafc27e7c3e35616085efde310793dc1661cc72f50984128"
+      },
+      {
+        "portable": "simulation/inputs/rtl/rv32_soc.sv",
+        "sha256": "cf5817f06eb68f923c965f51e60f6dde76462f0a6dbf2023ecd78cabad8e2fe9"
+      },
+      {
+        "portable": "simulation/inputs/rtl/rv32_uart.sv",
+        "sha256": "b83f5d6055bd794ca49e3781e673a00749249eaeaf1f2e908398dd5ce54ab8a2"
+      },
+      {
+        "portable": "simulation/inputs/rtl/rv32_uncached.sv",
+        "sha256": "d276e6b38ddb05117f52e054367f7f3d4503ba76f8f49025973197943ef50907"
+      },
+      {
+        "portable": "simulation/inputs/sim/native_selected_observer.sv",
+        "sha256": "d30b9b7a8c01266288151ebc527cd6612e1eb9a15e84aef3cc6a763549e3f019"
+      },
+      {
+        "portable": "simulation/inputs/sim/native_driver.cpp",
+        "sha256": "dabe77c1e80485714773e1658859044b005bd362d171d2340bad3faa968621d5"
+      }
+    ],
+    "timed_native_memory": true,
+    "logical_uart_clock_hz": 3200,
+    "logical_uart_baud": 100,
+    "cycle_budget": 2400000000,
+    "top": "rv32_observed_soc",
+    "external_models": [
+      {
+        "name": "GTP_DRM36K_E1.v",
+        "sha256": "3e372cd60025a439eb7435d770930260e22c40f148ae83c4bdf7398fb65ddb66",
+        "provider": "Pango PDS 2022.2-SP6.4"
+      },
+      {
+        "name": "GTP_GRS.v",
+        "sha256": "dae720bcc467ddb4ff99f2753368934e2649b87f6ac63b8a0d7219699bac1dec",
+        "provider": "Pango PDS 2022.2-SP6.4"
+      }
+    ]
+  },
+  "public_name": "PaceRV Base"
+}

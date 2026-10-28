@@ -1,0 +1,2 @@
+define_attribute {p:uart_rx} {PAP_IO_LOC} {B24}
+define_attribute {p:uart_tx} {PAP_IO_LOC} {C24}

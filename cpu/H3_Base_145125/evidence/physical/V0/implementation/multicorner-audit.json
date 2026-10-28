@@ -1,0 +1,157 @@
+{
+  "schema": 1,
+  "run": "archive:/rvc-physical-20261007T004736Z-e48b3d44",
+  "checks": {
+    "Setup_Slow": {
+      "cpu_slack_ns": 0.047,
+      "cpu_total_slack_ns": 0.0,
+      "cpu_failing_endpoints": 0,
+      "cpu_endpoints": 13772,
+      "all_clock_minimum_slack_ns": 0.047,
+      "all_clock_failing_endpoints": 0
+    },
+    "Hold_Slow": {
+      "cpu_slack_ns": 0.145,
+      "cpu_total_slack_ns": 0.0,
+      "cpu_failing_endpoints": 0,
+      "cpu_endpoints": 13772,
+      "all_clock_minimum_slack_ns": 0.145,
+      "all_clock_failing_endpoints": 0
+    },
+    "Recovery_Slow": {
+      "cpu_slack_ns": 1.282,
+      "cpu_total_slack_ns": 0.0,
+      "cpu_failing_endpoints": 0,
+      "cpu_endpoints": 1966,
+      "all_clock_minimum_slack_ns": 1.282,
+      "all_clock_failing_endpoints": 0
+    },
+    "Removal_Slow": {
+      "cpu_slack_ns": 1.607,
+      "cpu_total_slack_ns": 0.0,
+      "cpu_failing_endpoints": 0,
+      "cpu_endpoints": 1966,
+      "all_clock_minimum_slack_ns": 1.607,
+      "all_clock_failing_endpoints": 0
+    },
+    "Minimum Pulse Width_Slow": {
+      "cpu_slack_ns": 2.1,
+      "cpu_total_slack_ns": 0.0,
+      "cpu_failing_endpoints": 0,
+      "cpu_endpoints": 2408,
+      "all_clock_minimum_slack_ns": 2.1,
+      "all_clock_failing_endpoints": 0
+    },
+    "Setup_Fast": {
+      "cpu_slack_ns": 2.781,
+      "cpu_total_slack_ns": 0.0,
+      "cpu_failing_endpoints": 0,
+      "cpu_endpoints": 13772,
+      "all_clock_minimum_slack_ns": 2.781,
+      "all_clock_failing_endpoints": 0
+    },
+    "Hold_Fast": {
+      "cpu_slack_ns": 0.099,
+      "cpu_total_slack_ns": 0.0,
+      "cpu_failing_endpoints": 0,
+      "cpu_endpoints": 13772,
+      "all_clock_minimum_slack_ns": 0.099,
+      "all_clock_failing_endpoints": 0
+    },
+    "Recovery_Fast": {
+      "cpu_slack_ns": 3.414,
+      "cpu_total_slack_ns": 0.0,
+      "cpu_failing_endpoints": 0,
+      "cpu_endpoints": 1966,
+      "all_clock_minimum_slack_ns": 3.414,
+      "all_clock_failing_endpoints": 0
+    },
+    "Removal_Fast": {
+      "cpu_slack_ns": 0.983,
+      "cpu_total_slack_ns": 0.0,
+      "cpu_failing_endpoints": 0,
+      "cpu_endpoints": 1966,
+      "all_clock_minimum_slack_ns": 0.983,
+      "all_clock_failing_endpoints": 0
+    },
+    "Minimum Pulse Width_Fast": {
+      "cpu_slack_ns": 2.647,
+      "cpu_total_slack_ns": 0.0,
+      "cpu_failing_endpoints": 0,
+      "cpu_endpoints": 2408,
+      "all_clock_minimum_slack_ns": 2.647,
+      "all_clock_failing_endpoints": 0
+    }
+  },
+  "internal_multicorner_timing_passed": true,
+  "cpu_setup_wns_ns": 0.047,
+  "cpu_hold_wns_ns": 0.099,
+  "constraint_scope": "Accepted constraints unchanged. Reset, key and UART RX are asynchronous/false-pathed; LED and UART TX have no synchronous external timing specification. Closure covers reported internal/generated-clock timing with ILA omitted, not externally timed GPIO/UART paths.",
+  "unconstrained_port_diagnostics": [
+    [
+      "4086",
+      "key",
+      "input"
+    ],
+    [
+      "4086",
+      "rst_n",
+      "input"
+    ],
+    [
+      "4086",
+      "uart_rx",
+      "input"
+    ],
+    [
+      "4087",
+      "led[0]",
+      "output"
+    ],
+    [
+      "4087",
+      "led[1]",
+      "output"
+    ],
+    [
+      "4087",
+      "led[2]",
+      "output"
+    ],
+    [
+      "4087",
+      "led[3]",
+      "output"
+    ],
+    [
+      "4087",
+      "led[4]",
+      "output"
+    ],
+    [
+      "4087",
+      "led[5]",
+      "output"
+    ],
+    [
+      "4087",
+      "led[6]",
+      "output"
+    ],
+    [
+      "4087",
+      "led[7]",
+      "output"
+    ],
+    [
+      "4087",
+      "uart_tx",
+      "output"
+    ]
+  ],
+  "hardware_validated": false,
+  "timing_sha256": "ad7f4bbf44d8577e03cdc0d3a8510d3e4922bb3f96323ac08f4d629c67e3534a",
+  "implementation_log_sha256": "9307571acc7dd1e0effa6cb5e0bffccd5511730f1286a1641bb49fa310628e04",
+  "board_constraint_sha256": "7e248a5022603d4b78b3758d4d552d8efd34c50e34d7d27b0a79ac71ec30e5d0",
+  "uart_constraint_sha256": "1660f87805fe18229114bc941a06c322dd6307e0c22b360cd2740eaf3b8ea9ad"
+}

@@ -1,0 +1,48 @@
+name: Verify PaceRV
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  release-integrity:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify sources, archived captures, and timing
+        shell: pwsh
+        run: |
+          [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+          $OutputEncoding = [System.Text.UTF8Encoding]::new($true)
+          $ErrorActionPreference = 'Stop'
+          try {
+            & ([System.IO.Path]::Combine((Get-Location).Path, 'scripts', 'Test-PaceRV.ps1'))
+            if ($LASTEXITCODE -ne 0) { throw 'Integrity check failed.' }
+          } catch { Write-Error $_; exit 1 }
+  rtl-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Icarus Verilog
+        shell: pwsh
+        run: |
+          [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+          $OutputEncoding = [System.Text.UTF8Encoding]::new($true)
+          $ErrorActionPreference = 'Stop'
+          try {
+            & sudo apt-get update
+            if ($LASTEXITCODE -ne 0) { throw 'Package index update failed.' }
+            & sudo apt-get install --yes iverilog
+            if ($LASTEXITCODE -ne 0) { throw 'Icarus installation failed.' }
+          } catch { Write-Error $_; exit 1 }
+      - name: Execute multiplier and core tests
+        shell: pwsh
+        run: |
+          [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+          $OutputEncoding = [System.Text.UTF8Encoding]::new($true)
+          $ErrorActionPreference = 'Stop'
+          try {
+            & ([System.IO.Path]::Combine((Get-Location).Path, 'scripts', 'Test-RTL.ps1'))
+            if ($LASTEXITCODE -ne 0) { throw 'RTL tests failed.' }
+          } catch { Write-Error $_; exit 1 }

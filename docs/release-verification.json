@@ -1,0 +1,49 @@
+{
+  "Date": "2026-10-28",
+  "RTLTests": {
+    "Cases": [
+      {
+        "Result": "MUL_RETENTION_PASS checks=20792 transactions=2278 retained=254 canceled=1",
+        "ExitCode": 0,
+        "Test": "multiplier"
+      },
+      {
+        "Result": "CORE_TOKEN_PASS early=0 mode=0 scenarios=11",
+        "ExitCode": 0,
+        "Test": "core-e0-r0"
+      },
+      {
+        "Result": "CORE_TOKEN_PASS early=0 mode=1 scenarios=11",
+        "ExitCode": 0,
+        "Test": "core-e0-r1"
+      },
+      {
+        "Result": "CORE_TOKEN_PASS early=1 mode=0 scenarios=11",
+        "ExitCode": 0,
+        "Test": "core-e1-r0"
+      },
+      {
+        "Result": "CORE_TOKEN_PASS early=1 mode=1 scenarios=11",
+        "ExitCode": 0,
+        "Test": "core-e1-r1"
+      }
+    ],
+    "Passed": true,
+    "MultiplierChecks": 20792,
+    "CoreScenarios": 44,
+    "MultiplierTransactions": 2278
+  },
+  "ArchiveAudit": {
+    "TimingReports": 4,
+    "BoardCaptures": 12,
+    "TimingChecks": 40,
+    "SourceBindings": 38
+  },
+  "PhysicalProjectPreparation": {
+    "PreparedProjects": 4,
+    "Configurations": 2,
+    "FirmwareRoles": 2
+  },
+  "MeasuredPayloadsPreserved": 272,
+  "Scope": "Executed focused RTL tests, audited archived complete board captures and timing, and prepared physical projects. No new full CoreMark execution, PDS route, or live board capture was performed for this publication."
+}

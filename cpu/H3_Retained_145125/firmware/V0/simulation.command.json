@@ -1,0 +1,17 @@
+{
+  "status": "completed",
+  "argv": [
+    "archive:/",
+    "archive:/",
+    "2400000000"
+  ],
+  "cwd": "archive:/",
+  "started_utc": "2026-10-08T02:29:23.896553+00:00",
+  "timeout_seconds": 7200,
+  "shell": false,
+  "process_id": 110,
+  "actual_exit_code": 0,
+  "finished_utc": "2026-10-08T02:54:40.267943+00:00",
+  "elapsed_seconds": 1516.363560003,
+  "log_sha256": "1f41f2ee8509474ed0b263da8c31933a5dcdcb5b4c9edbf403775b345ca459c4"
+}

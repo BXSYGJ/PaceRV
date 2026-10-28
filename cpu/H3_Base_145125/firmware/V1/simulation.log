@@ -1,0 +1,42 @@
+ZGTC COREMARK READY send G; clock=145125000 Hz
+ZGTC COREMARK START iterations=6000 validation=1
+progress cycles=100000000
+progress cycles=200000000
+progress cycles=300000000
+progress cycles=400000000
+progress cycles=500000000
+progress cycles=600000000
+progress cycles=700000000
+progress cycles=800000000
+progress cycles=900000000
+progress cycles=1000000000
+progress cycles=1100000000
+progress cycles=1200000000
+progress cycles=1300000000
+progress cycles=1400000000
+progress cycles=1500000000
+progress cycles=1600000000
+progress cycles=1700000000
+2K validation run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 12032
+Total time (secs): 12
+Iterations/Sec   : 500
+Iterations       : 6000
+Compiler version : GCC 10.2.0
+Compiler flags   : -march=rv32imc -mabi=ilp32 -mcmodel=medany -msmall-data-limit=0 -std=c11 -O3 -funroll-loops -ffreestanding -fno-builtin -ffunction-sections -fdata-sections -Wall -Wextra -DTOTAL_DATA_SIZE=2000 -DITERATIONS=6000 -DVALIDATION_RUN=1 -DPERFORMANCE_RUN=0 -DCPU_CLOCK_HZ=145125000u -DCONSOLE_DELAY_CYCLES=0
+Memory location  : 64KiB on-chip RAM; cache mode/geometry in ZGTC config
+seedcrc          : 0x18f2
+[0]crclist       : 0xe3c1
+[0]crcmatrix     : 0x0747
+[0]crcstate      : 0x8d84
+[0]crcfinal      : 0x18e1
+Correct operation validated. See README.md for run and reporting rules.
+ZGTC cycles_hex=000000006815816b retired_hex=00000000625593a7 clock_hz=145125000
+ZGTC config=1e8e96fd ihit=937986524 imiss=512 dhit=412010560 dmiss=378023 writebacks=210025
+ZGTC COREMARK FINISHED
+EX_PRESELECT_PROFILE idle_candidates=19 older_load_wait=0 irq_cycles=0
+ID_ZERO_PROFILE resolved=66494705 redirects=14377063
+PASS RTL CoreMark smoke total_cycles=1746599394 total_retired=1649988063
+OBSERVER cycles=1746239851 retired=1649775527 minimum_sp=65152
+EVENTS redirects=32961690,120004,94352,0,0,0,0 eligible=32961690,120004,94352,0,0,0,0 request_stalls=0 response_waits=4120 barrier_cycles=0
