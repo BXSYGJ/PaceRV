@@ -2,6 +2,8 @@
 
 PaceRV is a single-issue, in-order RV32IMC processor organized around fetch, decode, execute, memory, and writeback stages. Its compressed-instruction front end handles 16/32-bit alignment. Branch prediction, forwarding, load-use handling, machine-mode control/status registers, multiplication/division, instruction/data caches, shared backing memory, and UART/GPIO are included in the released systems.
 
+The peripheral block includes UART TX/RX with FIFO buffering and interrupt control, 8-bit GPIO with synchronized inputs and interrupt-pending registers, and a 64-bit timer/compare pair. Software, timer, and external interrupts connect to the machine-mode unit. The live monitor snapshots I-cache/D-cache hits and misses, writebacks, and 64-bit architectural counters. These functions remain present in the board-measured systems and their resource counts.
+
 The paper focuses on the interaction between **memory admission** and **prepared multiplication**. Moving a data request earlier changes which multiply instructions remain stalled after an arithmetic preparation opportunity. The Retained implementation preserves permission to use a prepared low-word multiply result while the same dynamic instruction remains in execute. Operand hazards and instruction cancellation govern validity.
 
 The architectural M extension includes MUL, MULH, MULHSU, MULHU, DIV, DIVU, REM, and REMU. The prepared-result optimization applies to low-word MUL; it does not imply early preparation of every M instruction.

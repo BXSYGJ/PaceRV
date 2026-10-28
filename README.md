@@ -4,6 +4,22 @@
 
 PaceRV studies how memory-request admission affects the reuse of arithmetic prepared ahead of execution. It combines a compressed-instruction front end, branch prediction, private instruction/data caches, machine-mode CSRs, and UART/GPIO peripherals in a complete FPGA system. The SystemVerilog implementation and its board-qualified Base and Retained configurations are released here under MIT; third-party components retain their own licenses.
 
+**The 3.442 CoreMark/MHz result retains the complete SoC and its peripherals.** It is measured with instruction/data caches, backing RAM, UART, GPIO, a 64-bit timer, interrupts, machine CSRs, and live performance monitoring present in the implemented system.
+
+## Complete system features
+
+| Subsystem | Included functionality |
+|---|---|
+| Processor | Single-issue five-stage RV32IMC; hardware multiplication/division; compressed-instruction alignment; branch prediction |
+| Memory | Instruction/data caches, shared BRAM backing memory, cache maintenance, memory-mapped peripheral interface |
+| UART | Transmit/receive, FIFO buffering, status/error registers, interrupt controls |
+| GPIO | 8-bit input/output, synchronized inputs, interrupt enable and pending registers |
+| Timer and interrupts | 64-bit timer and compare registers; timer, software, and external interrupt inputs |
+| Machine services | Writable `mtvec` and `mscratch`, trap state, ECALL/return handling, 64-bit cycle and retired-instruction counters |
+| Live monitoring | Instruction/data cache hits and misses, data-cache writebacks, cycle/instruction counters and snapshot access |
+
+The LUT/FF/BRAM/DSP results below cover this complete routed system. The archived source and firmware identify the measured configuration.
+
 ## Measured implementation
 
 The following performance configurations ran **6,000 CoreMark iterations** on a Pango Logos2 PG2L200H-6FBB676 FPGA. Complete UART captures, firmware, timing reports, bitstreams, and source bindings are included.
