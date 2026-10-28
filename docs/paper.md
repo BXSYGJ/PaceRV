@@ -6,8 +6,9 @@ The conference paper studies admission-dependent arithmetic-result reuse, validi
 
 - Conference: https://mcsoc-forum.org/
 - Implementation: https://github.com/BXSYGJ/PaceRV
+- Paper reproducibility artifact: https://github.com/BXSYGJ/PaceRV-MCSoC2026
 - arXiv identifier and proceedings DOI: to be added after assignment.
 
-This repository releases the processor and its qualified implementation evidence. The paper's complete forecasting datasets and experiment matrix are a separate research artifact; the code release does not claim that every paper experiment can be rerun from this tree alone.
+This repository releases the processor and its qualified implementation evidence. The separate [MCSoC reproducibility artifact](https://github.com/BXSYGJ/PaceRV-MCSoC2026) provides paper data, frozen forecasts, eight complete new-workload dependency profiles, 58 execution records, finite-window RTL, the matched VexRiscv configuration and reproduction commands. Its scripts recompute the main results and rerun 64 complete-profile forecasts against their frozen references.
 
 Please cite the associated paper when using PaceRV in research. `CITATION.cff` records the authors and repository release metadata.
