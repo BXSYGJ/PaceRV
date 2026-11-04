@@ -1,0 +1,19 @@
+* text=auto
+*.ps1 text eol=crlf
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.v text eol=lf
+*.sv text eol=lf
+*.vp -text
+*.pdf binary
+*.png binary
+*.jpg binary
+*.docx binary
+*.pptx binary
+*.elf binary
+*.bin binary
+*.pt binary
+*.pth binary
+*.npy binary
+hardware/** -text

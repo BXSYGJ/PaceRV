@@ -1,0 +1,131 @@
+### Top-level constraints for the core-only build set (top_core_only, T36).
+###
+### Scope: DDR3 + NPU + Mel + weight loader + system control.  The video half
+### (HDMI transmitter, four UI layers, waveform / spectrogram chain) is not
+### part of this build set, so no pix_clk / cfg_clk / iic_* / vout_* / i2s_*
+### constraint exists here.
+###
+### Pin locations, IO standards and drive settings for the remaining pins are
+### copied verbatim from constraints/instrec_top.fdc so the board pinout stays
+### identical to the archived full bitstream:
+###   clk     D18 (27 MHz)      rst_n   C22 (KEY0, active low)
+###   uart_rx B24 (CP2102 RX)   uart_tx C24 (CP2102 TX)
+###   led     A20 / C18 / C19 / E18 / A17 / A18 / C17 / B17
+### The 125 MHz differential reference (ref_clk_p/n on N3/N2) and the 73 DDR3
+### mem_* pads stay in constraints/ddr3_100h.fdc.
+###
+### Load order (scripts/build_sets.json, semantic dependency): ddr3_100h.fdc
+### FIRST, this file SECOND.  ddr3_100h.fdc defines ref_clk and the whole DDR3
+### clock family; its own set_clock_groups statement names the board clock
+### {clk}, which does not exist yet at that point (PDS executes FDC commands
+### one by one, so that group is dropped - the SDC-2027 lesson).  The group is
+### therefore re-issued below, after {clk} has been created, so the 27 MHz
+### board clock is once again asynchronous to every DDR3 family clock.
+###
+### clk_nco: the audio PLL drives I2S cadence and the audio FIFO write side,
+### including when SD is tied low. Both core_only and rv_core retain this
+### domain. Declare its 216 MHz generated clock and isolate it from DDR3.
+
+# ---- 27 MHz board clock (same period as the full build) ----
+create_clock -name {clk} [get_ports {clk}] -period {37.037} -waveform {0.000 18.519}
+create_generated_clock -name {clk_nco} -source [get_ports {clk}] [get_pins {u_audio_pll/u_pll_audio/u_gpll/CLKOUT0}] -multiply_by {8} -divide_by {1}
+
+# ---- board clock is asynchronous to the whole DDR3 clock family ----
+# Every clock named here already exists: ref_clk and the generated DDR3
+# clocks come from ddr3_100h.fdc (loaded first), clk is created above.
+set_clock_groups -asynchronous -group [get_clocks {clk}] -group [get_clocks {clk_nco}] -group [get_clocks {ref_clk}] -group [get_clocks {rst_clk}] -group [get_clocks {ddrphy_sysclk}] -group [get_clocks {phy_dq_clk_0}] -group [get_clocks {phy_dq_sysclk_0}] -group [get_clocks {phy_dq_clk_1}] -group [get_clocks {phy_dq_sysclk_1}]
+
+# ---- 27 MHz input clock ----
+define_attribute {p:clk} {PAP_IO_DIRECTION} {INPUT}
+define_attribute {p:clk} {PAP_IO_LOC} {D18}
+define_attribute {p:clk} {PAP_IO_VCCIO} {3.3}
+define_attribute {p:clk} {PAP_IO_STANDARD} {LVCMOS33}
+define_attribute {p:clk} {PAP_IO_NONE} {TRUE}
+
+# ---- asynchronous board reset ----
+define_attribute {p:rst_n} {PAP_IO_DIRECTION} {INPUT}
+define_attribute {p:rst_n} {PAP_IO_LOC} {C22}
+define_attribute {p:rst_n} {PAP_IO_VCCIO} {3.3}
+define_attribute {p:rst_n} {PAP_IO_STANDARD} {LVCMOS33}
+define_attribute {p:rst_n} {PAP_IO_NONE} {TRUE}
+
+# ---- UART receive (weight upload frames) ----
+define_attribute {p:uart_rx} {PAP_IO_DIRECTION} {INPUT}
+define_attribute {p:uart_rx} {PAP_IO_LOC} {B24}
+define_attribute {p:uart_rx} {PAP_IO_VCCIO} {3.3}
+define_attribute {p:uart_rx} {PAP_IO_STANDARD} {LVCMOS33}
+define_attribute {p:uart_rx} {PAP_IO_NONE} {TRUE}
+
+# ---- diagnostic UART transmit pin ----
+define_attribute {p:uart_tx} {PAP_IO_DIRECTION} {OUTPUT}
+define_attribute {p:uart_tx} {PAP_IO_LOC} {C24}
+define_attribute {p:uart_tx} {PAP_IO_VCCIO} {3.3}
+define_attribute {p:uart_tx} {PAP_IO_STANDARD} {LVCMOS33}
+define_attribute {p:uart_tx} {PAP_IO_DRIVE} {8}
+define_attribute {p:uart_tx} {PAP_IO_SLEW} {SLOW}
+define_attribute {p:uart_tx} {PAP_IO_NONE} {TRUE}
+
+# ---- status LEDs ----
+define_attribute {p:led[0]} {PAP_IO_DIRECTION} {OUTPUT}
+define_attribute {p:led[0]} {PAP_IO_LOC} {A20}
+define_attribute {p:led[0]} {PAP_IO_VCCIO} {3.3}
+define_attribute {p:led[0]} {PAP_IO_STANDARD} {LVCMOS33}
+define_attribute {p:led[0]} {PAP_IO_DRIVE} {8}
+define_attribute {p:led[0]} {PAP_IO_SLEW} {SLOW}
+define_attribute {p:led[0]} {PAP_IO_NONE} {TRUE}
+
+define_attribute {p:led[1]} {PAP_IO_DIRECTION} {OUTPUT}
+define_attribute {p:led[1]} {PAP_IO_LOC} {C18}
+define_attribute {p:led[1]} {PAP_IO_VCCIO} {3.3}
+define_attribute {p:led[1]} {PAP_IO_STANDARD} {LVCMOS33}
+define_attribute {p:led[1]} {PAP_IO_DRIVE} {8}
+define_attribute {p:led[1]} {PAP_IO_SLEW} {SLOW}
+define_attribute {p:led[1]} {PAP_IO_NONE} {TRUE}
+
+define_attribute {p:led[2]} {PAP_IO_DIRECTION} {OUTPUT}
+define_attribute {p:led[2]} {PAP_IO_LOC} {C19}
+define_attribute {p:led[2]} {PAP_IO_VCCIO} {3.3}
+define_attribute {p:led[2]} {PAP_IO_STANDARD} {LVCMOS33}
+define_attribute {p:led[2]} {PAP_IO_DRIVE} {8}
+define_attribute {p:led[2]} {PAP_IO_SLEW} {SLOW}
+define_attribute {p:led[2]} {PAP_IO_NONE} {TRUE}
+
+define_attribute {p:led[3]} {PAP_IO_DIRECTION} {OUTPUT}
+define_attribute {p:led[3]} {PAP_IO_LOC} {E18}
+define_attribute {p:led[3]} {PAP_IO_VCCIO} {3.3}
+define_attribute {p:led[3]} {PAP_IO_STANDARD} {LVCMOS33}
+define_attribute {p:led[3]} {PAP_IO_DRIVE} {8}
+define_attribute {p:led[3]} {PAP_IO_SLEW} {SLOW}
+define_attribute {p:led[3]} {PAP_IO_NONE} {TRUE}
+
+define_attribute {p:led[4]} {PAP_IO_DIRECTION} {OUTPUT}
+define_attribute {p:led[4]} {PAP_IO_LOC} {A17}
+define_attribute {p:led[4]} {PAP_IO_VCCIO} {3.3}
+define_attribute {p:led[4]} {PAP_IO_STANDARD} {LVCMOS33}
+define_attribute {p:led[4]} {PAP_IO_DRIVE} {8}
+define_attribute {p:led[4]} {PAP_IO_SLEW} {SLOW}
+define_attribute {p:led[4]} {PAP_IO_NONE} {TRUE}
+
+define_attribute {p:led[5]} {PAP_IO_DIRECTION} {OUTPUT}
+define_attribute {p:led[5]} {PAP_IO_LOC} {A18}
+define_attribute {p:led[5]} {PAP_IO_VCCIO} {3.3}
+define_attribute {p:led[5]} {PAP_IO_STANDARD} {LVCMOS33}
+define_attribute {p:led[5]} {PAP_IO_DRIVE} {8}
+define_attribute {p:led[5]} {PAP_IO_SLEW} {SLOW}
+define_attribute {p:led[5]} {PAP_IO_NONE} {TRUE}
+
+define_attribute {p:led[6]} {PAP_IO_DIRECTION} {OUTPUT}
+define_attribute {p:led[6]} {PAP_IO_LOC} {C17}
+define_attribute {p:led[6]} {PAP_IO_VCCIO} {3.3}
+define_attribute {p:led[6]} {PAP_IO_STANDARD} {LVCMOS33}
+define_attribute {p:led[6]} {PAP_IO_DRIVE} {8}
+define_attribute {p:led[6]} {PAP_IO_SLEW} {SLOW}
+define_attribute {p:led[6]} {PAP_IO_NONE} {TRUE}
+
+define_attribute {p:led[7]} {PAP_IO_DIRECTION} {OUTPUT}
+define_attribute {p:led[7]} {PAP_IO_LOC} {B17}
+define_attribute {p:led[7]} {PAP_IO_VCCIO} {3.3}
+define_attribute {p:led[7]} {PAP_IO_STANDARD} {LVCMOS33}
+define_attribute {p:led[7]} {PAP_IO_DRIVE} {8}
+define_attribute {p:led[7]} {PAP_IO_SLEW} {SLOW}
+define_attribute {p:led[7]} {PAP_IO_NONE} {TRUE}

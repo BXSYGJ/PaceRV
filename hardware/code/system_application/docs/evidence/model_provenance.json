@@ -1,0 +1,111 @@
+{
+  "checkpoint": {
+    "epoch": 6,
+    "validation_accuracy": 0.9396107613050945,
+    "validation_loss": 0.24862031484210387,
+    "trainable_parameters": 685864,
+    "optimizer": {
+      "lr": 0.0009652393605146842,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0.0001,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "initial_lr": 0.001
+    },
+    "scheduler": {
+      "T_max": 50,
+      "eta_min": 1e-05,
+      "base_lrs": [
+        0.001
+      ],
+      "last_epoch": 6,
+      "verbose": false,
+      "_step_count": 7,
+      "_get_lr_called_within_step": false,
+      "_last_lr": [
+        0.0009652393605146842
+      ]
+    }
+  },
+  "source_training_repository": {
+    "commit": "f340b80dd4ce14d195b9bfef6f69c110077edee2",
+    "working_tree_sources_copied": true,
+    "note": "Original train_config.json and metrics.jsonl were overwritten by later FocalLoss/SpecAugment experiment; not used as baseline facts."
+  },
+  "workflow_changes": [
+    "Removed comments/docstrings and DualHeadInstrumentCNN",
+    "Baseline retraining uses weighted CrossEntropy without SpecAugment; historical unspecified flags are not claimed recovered",
+    "Cached validation/test augmentation disabled and track_id split checked",
+    "Weight exporter/golden paths localized; hardware RTL unchanged"
+  ],
+  "model_lineage_validation": "PASS: FP32 fused weights quantize exactly to all six archived int8 arrays; arrays match TorchScript and hardware image segments",
+  "assets_sha256": {
+    "training/.gitignore": "d2d5465b51ff466257c08f10e04172b756e3b1c8d59f8999e7297fd374bd1cbb",
+    "training/README.md": "c39edd92a1550f51043ccb5c95ee56f9efbc6c6e1dd3391289ac39bff0f88773",
+    "training/requirements.txt": "034da2d115b62ba46d3f41061e4523aa4a06f140067b155d5b23f5888d1ea360",
+    "training/deploy/class_names.json": "69cf72f78f0863872ece731d4df8acabd80d31cff67c62f60ccc913718089847",
+    "training/deploy/quantized_model.pt": "6de5803e22831ed86180234f888f6f77fe55ff97041fc2b0b6ffbba4a8e948cd",
+    "training/runs/best_model.pt": "9e9eca6755c2050ddc36e7888fda0c0b04d86354e30705b9828e9139a901a3a3",
+    "training/src/cached_dataset.py": "5b6ada8c86a6c03df50a52a0599da9f4bea4758308e2dc177f72ad7b07933fb1",
+    "training/src/cache_features.py": "1dc06a0f5d6f214e18a6f3c2483c89110b9dba04a9b4b9bef829f0b779faec8e",
+    "training/src/dataset.py": "de5398bd4421f7a1acc7cf1449b8dc50374e142d9ca62656d059652ed84bad38",
+    "training/src/evaluate.py": "ec1d5a298712e8fed43a3771822def2c94c3af4df03c0cfd00459bdf0a93c8ab",
+    "training/src/features.py": "0c2d170803b775d61fac754b5083006dca8d119f2eaa393d8a2340f237a78492",
+    "training/src/model.py": "967ab7b7219a173090263abf564c3091b58c87cd04c8ea6959ad470eb1cf6724",
+    "training/src/quantize.py": "59a4d175ca0b796eb1505ae70e7588cf4eb3c520c7747ff1ce8c9be4951980ea",
+    "training/src/train.py": "e10ccf06031654efee9fb58f467114b232b15ad5a1588c52f437e88bc7541fbb",
+    "training/src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "training/deploy/weights/bn1_bias.npy": "83bf742fec5d364d5ee2ec5551bb344b1758d3ce0d639e9bab84e6e8b1224e2d",
+    "training/deploy/weights/bn1_eps.npy": "524f881151d25f91662f1a5a15c6b7e73babc97d10b8150453f5b2654691873c",
+    "training/deploy/weights/bn1_running_mean.npy": "0d0661f4dd212195aec562e651d1beb076cbcbdc3f2fbc05c8ebda2d93e4cfe4",
+    "training/deploy/weights/bn1_running_var.npy": "7b66157ae8791b6b36d8bcd774c19c91499422efa19c5094350d209fd1500f9a",
+    "training/deploy/weights/bn1_weight.npy": "b3e37c51455890de5284755a4bb122f0e2e0022e68227aa1bdc2cbcd6512cd47",
+    "training/deploy/weights/bn2_bias.npy": "ec44921be853782d244e8842642dff952866fbd177d35b9f8e8d3d178507f97f",
+    "training/deploy/weights/bn2_eps.npy": "524f881151d25f91662f1a5a15c6b7e73babc97d10b8150453f5b2654691873c",
+    "training/deploy/weights/bn2_running_mean.npy": "dd097279530c3d1751c3afa83cddd28cc963c273e35b5312462a2b5a92c149c6",
+    "training/deploy/weights/bn2_running_var.npy": "3c1c7699b4e497d459092fb38208074842bd8871c6ecd63220e165d68f273f47",
+    "training/deploy/weights/bn2_weight.npy": "d2f5d5438b1467e028f53da5b769e850193f3b3d645458567df22ca953c5df03",
+    "training/deploy/weights/bn3_bias.npy": "86485cbf396e7e7639e7c7b450d245a22905be8af4f65e0a33e0de56f137f858",
+    "training/deploy/weights/bn3_eps.npy": "524f881151d25f91662f1a5a15c6b7e73babc97d10b8150453f5b2654691873c",
+    "training/deploy/weights/bn3_running_mean.npy": "0fafcb26fe7e89090adf035246d61d1baa92d619d54d9809192644d11b69cc6f",
+    "training/deploy/weights/bn3_running_var.npy": "a45d3838af4c13958e777967ff01101095d756d376907aa8eb9872be8645c796",
+    "training/deploy/weights/bn3_weight.npy": "4b43a1ae8e7246e7b147325c70a7e9b46b274a4caa143e2fb1f17f9cd8639027",
+    "training/deploy/weights/bn4_bias.npy": "5fa586651e997db04f027f6d0059c80ace6651924f5745050d26a661bf34cb1e",
+    "training/deploy/weights/bn4_eps.npy": "524f881151d25f91662f1a5a15c6b7e73babc97d10b8150453f5b2654691873c",
+    "training/deploy/weights/bn4_running_mean.npy": "40a78be1b7b33c97a702d488d4b71abb738c39afa7bc74f4a5d0a4a68234f20a",
+    "training/deploy/weights/bn4_running_var.npy": "eab8a10abc79e791a85b9ea3f468c2efdbcf7bc1e9549e4f6c1d7808d85ceefa",
+    "training/deploy/weights/bn4_weight.npy": "d2f9f21019d990585043b88002d0c03076ac8badd19be5399c3f0a670741505c",
+    "training/deploy/weights/conv1_bias_int32.npy": "c0c93a3164a6b92507f78791a931b777fde040a2da9bd50edac5d2625d96d0f1",
+    "training/deploy/weights/conv1_scale.npy": "58d7c533302ce1fa968085db9f30481b77b77a7c74f1f0383c2a70afa5e451e7",
+    "training/deploy/weights/conv1_weight_int8.npy": "adb5a56a0c63ff2a2fb96149fd9c72feb90b96d4397c902f2403260b91a87bea",
+    "training/deploy/weights/conv1_zero_point.npy": "c0c93a3164a6b92507f78791a931b777fde040a2da9bd50edac5d2625d96d0f1",
+    "training/deploy/weights/conv2_bias_int32.npy": "f07df30b168739d000e65c2b04efb2735b170fd63b9139abc2bd1f0c7ff7a826",
+    "training/deploy/weights/conv2_scale.npy": "5ddf7776c64ebcf790b044932946872ea2288b298b35ce725a9fb14dcce26aad",
+    "training/deploy/weights/conv2_weight_int8.npy": "ba67a05aa8a4dfbb56ed635fa1c9d911df376b60fdce6682d8c710f5568ac66f",
+    "training/deploy/weights/conv2_zero_point.npy": "50b62cd7bb9adfbb06637fd376b0aaa66a8b70bc5b6538b1d78ebc6d5c2c35f3",
+    "training/deploy/weights/conv3_bias_int32.npy": "2948726bf9fe5a0f46809c9500d45017ed04ad3efaf863cd41f30fccb6d58403",
+    "training/deploy/weights/conv3_scale.npy": "a4de751d50448837c8ae7a69af1542b57607fc7c3b4d672e68f76c986e0e9fdd",
+    "training/deploy/weights/conv3_weight_int8.npy": "dc64bb040f852c3290af0db91e93b67f001511362980660e8ed52140cdbb31a9",
+    "training/deploy/weights/conv3_zero_point.npy": "f9fc18b60a7dfc8ee01db3fcca9d7f6acc4510c5c0bfb229456a41658ade614f",
+    "training/deploy/weights/conv4_bias_int32.npy": "4dbd502d5ca57ce31791cfa6867a104ee03138b1f78a703e2b0bd98055335284",
+    "training/deploy/weights/conv4_scale.npy": "613efe3717cc648bb01303bc8627da121d7f35accf0b6e7a16f9bf977c6bb4e8",
+    "training/deploy/weights/conv4_weight_int8.npy": "ca0a669010984a894094622f4b0304876053c7326045e2810d1519e4ddb1d9eb",
+    "training/deploy/weights/conv4_zero_point.npy": "4885861f12444e26a08d823fef2e7074ddad8a1a31520eab9f1c56f9799da1fe",
+    "training/deploy/weights/fc1_bias_int32.npy": "48a36b55628bcbeaafe8bd57a48eeca48bac9bcbbaaa8d98863c0b5c2efd46c7",
+    "training/deploy/weights/fc1_scale.npy": "f5ebc5a8283194a9f379c97893a988e8d85c7813a93635c141942af318b867f4",
+    "training/deploy/weights/fc1_weight_int8.npy": "709eeba034f2937ec1efd7831b7b3a21231b6e7cfa5ba92267bd985646393792",
+    "training/deploy/weights/fc1_zero_point.npy": "48a36b55628bcbeaafe8bd57a48eeca48bac9bcbbaaa8d98863c0b5c2efd46c7",
+    "training/deploy/weights/fc2_bias_int32.npy": "e85567acdebf27c5802103a8d231931c1046133fa7a6213db33697488c882cd6",
+    "training/deploy/weights/fc2_scale.npy": "4bc3ab9a682ae42ce2b40c97afff6e4ee0b44e831491453e3b26c750c179e530",
+    "training/deploy/weights/fc2_weight_int8.npy": "309d15f89f43c9ad4391453d3c1db86daa9930a80b16d047d12bfff2ef26fc02",
+    "training/deploy/weights/fc2_zero_point.npy": "e85567acdebf27c5802103a8d231931c1046133fa7a6213db33697488c882cd6"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "target": "five_group_multilabel_activity",
+  "fpga_deployed": false,
+  "quantized": false,
+  "checkpoint_epoch": 22,
+  "group_order": [
+    "strings",
+    "woodwinds",
+    "brass",
+    "percussion",
+    "keys"
+  ],
+  "input_shape": [
+    1,
+    1,
+    64,
+    130
+  ],
+  "sample_rate_hz": 44100,
+  "segment_samples": 66150,
+  "activity_activation": "independent sigmoid; sum is not normalized",
+  "dominance_activation": "separate softmax head, mask activity > 0.5, renormalize",
+  "source_checkpoint": "D:\\0000\\111\\001\\Pango\\InstRec\\runs\\group5_v3\\best_model.pth",
+  "source_checkpoint_sha256": "5ada8db602427af8b5c7ba01aa581f5852ebf2b884d94932c821fe44cf22b636",
+  "source_model_sha256": "4d3399ab2980fec032c12ccb33ccb6186a56979cd55beee91d4066a3da46c383",
+  "torch_version": "2.14.1+cpu",
+  "strict_state_load": true,
+  "validation_rows": [
+    17285,
+    17284,
+    17287,
+    34713,
+    31108
+  ],
+  "activities": [
+    [
+      0.9994800686836243,
+      0.9896535277366638,
+      0.6002883911132812,
+      8.009111429618798e-11,
+      0.0005576283438131213
+    ],
+    [
+      0.024481624364852905,
+      0.9999779462814331,
+      0.07884127646684647,
+      5.98478835933669e-11,
+      3.5841751468979055e-06
+    ],
+    [
+      0.9999977350234985,
+      0.9938023090362549,
+      0.9969937801361084,
+      4.182445935029986e-16,
+      1.225173296148796e-09
+    ],
+    [
+      0.46314048767089844,
+      0.08405134826898575,
+      0.09773986786603928,
+      2.4175047741437083e-08,
+      0.111973837018013
+    ],
+    [
+      0.8302463889122009,
+      0.680364727973938,
+      0.006038500461727381,
+      2.7842443905967684e-09,
+      0.023279376327991486
+    ]
+  ],
+  "activity_sums": [
+    2.589979648590088,
+    1.1033045053482056,
+    2.9907937049865723,
+    0.7569055557250977,
+    1.5399290323257446
+  ],
+  "limitations": [
+    "Float reference only; INT8 calibration and bit-exact RTL migration pending",
+    "Small selected validation fixture is not a new accuracy evaluation",
+    "Current FPGA 8-class softmax and 258-frame window are incompatible"
+  ],
+  "assets": {
+    "float_state.npz": "0fb659348612629a91818cba45280e38b721047f3d8122e0726fa4a6e8ac4826",
+    "model_source.py": "4d3399ab2980fec032c12ccb33ccb6186a56979cd55beee91d4066a3da46c383",
+    "reference_vectors.npz": "584fb765a5270a869db855e8c4b9c6d803d906fcbcd470c8e3795c6097f9acaa",
+    "train_config.json": "49299ad6fcf4f295138ee8dc527b80969b72b7acab8cc2cabd9cfd8522b95366"
+  }
+}

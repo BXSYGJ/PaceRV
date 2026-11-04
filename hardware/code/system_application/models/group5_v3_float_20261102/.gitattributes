@@ -1,0 +1,3 @@
+# Preserve frozen source and binary fixture hashes across Windows checkouts.
+model_source.py -text
+*.npz -text

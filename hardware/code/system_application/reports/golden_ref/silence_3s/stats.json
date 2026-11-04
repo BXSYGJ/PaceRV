@@ -1,0 +1,178 @@
+{
+  "stem": "silence_3s",
+  "files": {
+    "feat": {
+      "dtype": "uint8",
+      "shape": [
+        64,
+        258
+      ],
+      "min": 49,
+      "max": 49,
+      "n_unique": 1
+    },
+    "conv1": {
+      "dtype": "uint8",
+      "shape": [
+        48,
+        64,
+        258
+      ],
+      "min": 0,
+      "max": 1,
+      "n_unique": 2
+    },
+    "conv2": {
+      "dtype": "uint8",
+      "shape": [
+        96,
+        32,
+        129
+      ],
+      "min": 0,
+      "max": 22,
+      "n_unique": 23
+    },
+    "conv3": {
+      "dtype": "uint8",
+      "shape": [
+        192,
+        16,
+        64
+      ],
+      "min": 0,
+      "max": 36,
+      "n_unique": 37
+    },
+    "conv4": {
+      "dtype": "uint8",
+      "shape": [
+        256,
+        8,
+        32
+      ],
+      "min": 0,
+      "max": 35,
+      "n_unique": 35
+    },
+    "pool1": {
+      "dtype": "uint8",
+      "shape": [
+        48,
+        32,
+        129
+      ],
+      "min": 0,
+      "max": 1,
+      "n_unique": 2
+    },
+    "pool2": {
+      "dtype": "uint8",
+      "shape": [
+        96,
+        16,
+        64
+      ],
+      "min": 0,
+      "max": 22,
+      "n_unique": 22
+    },
+    "pool3": {
+      "dtype": "uint8",
+      "shape": [
+        192,
+        8,
+        32
+      ],
+      "min": 0,
+      "max": 36,
+      "n_unique": 37
+    },
+    "pool4": {
+      "dtype": "uint8",
+      "shape": [
+        256,
+        4,
+        16
+      ],
+      "min": 0,
+      "max": 35,
+      "n_unique": 35
+    },
+    "gap": {
+      "dtype": "int32",
+      "shape": [
+        256
+      ],
+      "min": 0,
+      "max": 23,
+      "n_unique": 21
+    },
+    "fc1": {
+      "dtype": "uint8",
+      "shape": [
+        128
+      ],
+      "min": 0,
+      "max": 39,
+      "n_unique": 30
+    },
+    "fc2_logits": {
+      "dtype": "int32",
+      "shape": [
+        8
+      ],
+      "min": -12,
+      "max": 11,
+      "n_unique": 8
+    },
+    "probs": {
+      "dtype": "uint16",
+      "shape": [
+        8
+      ],
+      "min": 65,
+      "max": 40299,
+      "n_unique": 8
+    },
+    "probs_float": {
+      "dtype": "float64",
+      "shape": [
+        8
+      ],
+      "min": 0.0009918212890625,
+      "max": 0.6149139404296875,
+      "n_unique": 8
+    },
+    "probs_u8_percent": {
+      "dtype": "uint8",
+      "shape": [
+        8
+      ],
+      "min": 0,
+      "max": 61,
+      "n_unique": 6
+    },
+    "probs_u8_q0_8": {
+      "dtype": "uint8",
+      "shape": [
+        8
+      ],
+      "min": 0,
+      "max": 157,
+      "n_unique": 7
+    }
+  },
+  "golden_top1": 1,
+  "probs_q16_sum": 65537,
+  "percent": [
+    0,
+    61,
+    26,
+    1,
+    0,
+    0,
+    4,
+    7
+  ]
+}

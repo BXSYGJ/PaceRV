@@ -1,0 +1,796 @@
+{
+  "schema": 1,
+  "board": "Pango 100Pro+",
+  "family": "Logos2",
+  "device": "PG2L100H",
+  "package": "FBG676",
+  "speedgrade": "-6",
+  "projects": {
+    "performance_155250_V0": {
+      "root": "code/bare_cpu/performance_155250",
+      "top": "pds_soc_top",
+      "sources": [
+        "rtl/*.sv",
+        "fpga/*.sv",
+        "fpga/pds_soc_top.v"
+      ],
+      "ip_cores": [],
+      "constraints": [
+        "constraints/board_100proplus.fdc"
+      ],
+      "copies": [
+        {
+          "source": "firmware/V0/firmware.hex",
+          "destination": "firmware.hex"
+        }
+      ],
+      "clock_hz": 155250000,
+      "uart_baud": 9600,
+      "pnr_options": "-dc_duplication false -plc_decongestion 0 -gplace_seed 2 -logic_optimize_lut6d_combing_strategy 3",
+      "qualification": "100Pro+ project; route and board qualification apply to newly built image."
+    },
+    "performance_155250_V1": {
+      "root": "code/bare_cpu/performance_155250",
+      "top": "pds_soc_top",
+      "sources": [
+        "rtl/*.sv",
+        "fpga/*.sv",
+        "fpga/pds_soc_top.v"
+      ],
+      "ip_cores": [],
+      "constraints": [
+        "constraints/board_100proplus.fdc"
+      ],
+      "copies": [
+        {
+          "source": "firmware/V1/firmware.hex",
+          "destination": "firmware.hex"
+        }
+      ],
+      "clock_hz": 155250000,
+      "uart_baud": 9600,
+      "pnr_options": "-dc_duplication false -plc_decongestion 0 -gplace_seed 2 -logic_optimize_lut6d_combing_strategy 3",
+      "qualification": "100Pro+ project; route and board qualification apply to newly built image."
+    },
+    "efficiency_145125_V0": {
+      "root": "code/bare_cpu/efficiency_145125",
+      "top": "pds_soc_top",
+      "sources": [
+        "rtl/*.sv",
+        "fpga/*.sv",
+        "fpga/pds_soc_top.v"
+      ],
+      "ip_cores": [],
+      "constraints": [
+        "constraints/board_100proplus.fdc"
+      ],
+      "copies": [
+        {
+          "source": "firmware/V0/firmware.hex",
+          "destination": "firmware.hex"
+        }
+      ],
+      "clock_hz": 145125000,
+      "uart_baud": 9600,
+      "pnr_options": "-dc_duplication false -plc_decongestion 0 -gplace_seed 2 -logic_optimize_lut6d_combing_strategy 3",
+      "qualification": "100Pro+ project; route and board qualification apply to newly built image."
+    },
+    "efficiency_145125_V1": {
+      "root": "code/bare_cpu/efficiency_145125",
+      "top": "pds_soc_top",
+      "sources": [
+        "rtl/*.sv",
+        "fpga/*.sv",
+        "fpga/pds_soc_top.v"
+      ],
+      "ip_cores": [],
+      "constraints": [
+        "constraints/board_100proplus.fdc"
+      ],
+      "copies": [
+        {
+          "source": "firmware/V1/firmware.hex",
+          "destination": "firmware.hex"
+        }
+      ],
+      "clock_hz": 145125000,
+      "uart_baud": 9600,
+      "pnr_options": "-dc_duplication false -plc_decongestion 0 -gplace_seed 2 -logic_optimize_lut6d_combing_strategy 3",
+      "qualification": "100Pro+ project; route and board qualification apply to newly built image."
+    },
+    "application_full": {
+      "root": "code/system_application",
+      "top": "instrec_top",
+      "sources": [
+        "src/*.v",
+        "src/audio/*.v",
+        "src/ddr3/*.v",
+        "src/mel/*.v",
+        "src/npu/*.v",
+        "src/ui/*.v",
+        "src/hdmi/*.v",
+        "src/ctrl/*.v",
+        "src/ip/*.v",
+        "src/cpu/rv32_cpu_subsys.sv",
+        "src/cpu/core/rv32_core.sv",
+        "src/cpu/core/rv32_decode.sv",
+        "src/cpu/core/rv32_alu.sv",
+        "src/cpu/core/rv32_muldiv.sv",
+        "src/cpu/core/rv32_btb.sv",
+        "src/cpu/core/rv32_machine.sv"
+      ],
+      "ip_cores": [
+        "ipcore/pll/pll.idf",
+        "ipcore/pll_audio/pll_audio.idf",
+        "ipcore/ddr3_test/ddr3_test.idf"
+      ],
+      "constraints": [
+        "constraints/instrec_top.fdc",
+        "constraints/ddr3_100h.fdc",
+        "constraints/clock_groups_async.fdc"
+      ],
+      "copies": [
+        {
+          "source": "src/mel/exp_lut.hex",
+          "destination": "src/mel/exp_lut.hex"
+        },
+        {
+          "source": "src/mel/hann_q15.hex",
+          "destination": "src/mel/hann_q15.hex"
+        },
+        {
+          "source": "src/mel/log2_lut.hex",
+          "destination": "src/mel/log2_lut.hex"
+        },
+        {
+          "source": "src/mel/mel_coo.hex",
+          "destination": "src/mel/mel_coo.hex"
+        },
+        {
+          "source": "src/mel/twiddle_q15.hex",
+          "destination": "src/mel/twiddle_q15.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s10.hex",
+          "destination": "src/mel/twiddle_s10.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s11.hex",
+          "destination": "src/mel/twiddle_s11.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s2.hex",
+          "destination": "src/mel/twiddle_s2.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s3.hex",
+          "destination": "src/mel/twiddle_s3.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s4.hex",
+          "destination": "src/mel/twiddle_s4.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s5.hex",
+          "destination": "src/mel/twiddle_s5.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s6.hex",
+          "destination": "src/mel/twiddle_s6.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s7.hex",
+          "destination": "src/mel/twiddle_s7.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s8.hex",
+          "destination": "src/mel/twiddle_s8.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s9.hex",
+          "destination": "src/mel/twiddle_s9.hex"
+        },
+        {
+          "source": "src/ui/class_labels.hex",
+          "destination": "src/ui/class_labels.hex"
+        },
+        {
+          "source": "src/ui/dashboard_ascii.hex",
+          "destination": "src/ui/dashboard_ascii.hex"
+        },
+        {
+          "source": "src/ui/dashboard_classes.hex",
+          "destination": "src/ui/dashboard_classes.hex"
+        },
+        {
+          "source": "src/ui/dashboard_font.hex",
+          "destination": "src/ui/dashboard_font.hex"
+        },
+        {
+          "source": "src/ui/dashboard_tiles.hex",
+          "destination": "src/ui/dashboard_tiles.hex"
+        },
+        {
+          "source": "src/ui/demo_confidence.hex",
+          "destination": "src/ui/demo_confidence.hex"
+        },
+        {
+          "source": "src/ui/demo_dashboard_ascii.hex",
+          "destination": "src/ui/demo_dashboard_ascii.hex"
+        },
+        {
+          "source": "src/ui/demo_dashboard_classes.hex",
+          "destination": "src/ui/demo_dashboard_classes.hex"
+        },
+        {
+          "source": "src/ui/demo_dashboard_font.hex",
+          "destination": "src/ui/demo_dashboard_font.hex"
+        },
+        {
+          "source": "src/ui/demo_dashboard_tiles.hex",
+          "destination": "src/ui/demo_dashboard_tiles.hex"
+        },
+        {
+          "source": "src/ui/font8x16.hex",
+          "destination": "src/ui/font8x16.hex"
+        },
+        {
+          "source": "src/cpu/prog.hex",
+          "destination": "src/cpu/prog.hex"
+        }
+      ],
+      "uart_baud": 115200,
+      "pnr_options": ""
+    },
+    "application_ddr3_diag": {
+      "root": "code/system_application",
+      "top": "top_ddr3_diag",
+      "sources": [
+        "src/ddr3/*.v",
+        "src/ctrl/self_test.v",
+        "src/ctrl/uart_tx.v",
+        "src/diag/diag_uart_report.v",
+        "src/diag/top_ddr3_diag.v"
+      ],
+      "ip_cores": [
+        "ipcore/ddr3_test/ddr3_test.idf"
+      ],
+      "constraints": [
+        "constraints/ddr3_100h.fdc",
+        "constraints/top_ddr3_diag.fdc"
+      ],
+      "copies": [],
+      "uart_baud": 115200,
+      "pnr_options": ""
+    },
+    "application_ui_demo": {
+      "root": "code/system_application",
+      "top": "top_ui_demo",
+      "sources": [
+        "src/ui/*.v",
+        "src/hdmi/*.v",
+        "src/ctrl/uart_tx.v",
+        "src/diag/diag_uart_report.v",
+        "src/diag/top_ui_demo.v"
+      ],
+      "ip_cores": [
+        "ipcore/pll/pll.idf"
+      ],
+      "constraints": [
+        "constraints/top_ui_demo.fdc"
+      ],
+      "copies": [
+        {
+          "source": "src/ui/class_labels.hex",
+          "destination": "src/ui/class_labels.hex"
+        },
+        {
+          "source": "src/ui/dashboard_ascii.hex",
+          "destination": "src/ui/dashboard_ascii.hex"
+        },
+        {
+          "source": "src/ui/dashboard_classes.hex",
+          "destination": "src/ui/dashboard_classes.hex"
+        },
+        {
+          "source": "src/ui/dashboard_font.hex",
+          "destination": "src/ui/dashboard_font.hex"
+        },
+        {
+          "source": "src/ui/dashboard_tiles.hex",
+          "destination": "src/ui/dashboard_tiles.hex"
+        },
+        {
+          "source": "src/ui/demo_confidence.hex",
+          "destination": "src/ui/demo_confidence.hex"
+        },
+        {
+          "source": "src/ui/demo_dashboard_ascii.hex",
+          "destination": "src/ui/demo_dashboard_ascii.hex"
+        },
+        {
+          "source": "src/ui/demo_dashboard_classes.hex",
+          "destination": "src/ui/demo_dashboard_classes.hex"
+        },
+        {
+          "source": "src/ui/demo_dashboard_font.hex",
+          "destination": "src/ui/demo_dashboard_font.hex"
+        },
+        {
+          "source": "src/ui/demo_dashboard_tiles.hex",
+          "destination": "src/ui/demo_dashboard_tiles.hex"
+        },
+        {
+          "source": "src/ui/font8x16.hex",
+          "destination": "src/ui/font8x16.hex"
+        }
+      ],
+      "uart_baud": 115200,
+      "pnr_options": ""
+    },
+    "application_conv1_test": {
+      "root": "code/system_application",
+      "top": "top_npu_conv1_test",
+      "sources": [
+        "src/npu/conv_engine.v",
+        "src/npu/requant_unit.v",
+        "src/ctrl/uart_tx.v",
+        "src/diag/diag_uart_report.v",
+        "src/diag/top_npu_conv1_test.v"
+      ],
+      "ip_cores": [],
+      "constraints": [
+        "constraints/top_npu_conv1_test.fdc"
+      ],
+      "copies": [
+        {
+          "source": "hex_conv1/conv1_ctr.hex",
+          "destination": "hex_conv1/conv1_ctr.hex"
+        },
+        {
+          "source": "hex_conv1/conv1_feat.hex",
+          "destination": "hex_conv1/conv1_feat.hex"
+        },
+        {
+          "source": "hex_conv1/conv1_w32.hex",
+          "destination": "hex_conv1/conv1_w32.hex"
+        }
+      ],
+      "uart_baud": 115200,
+      "pnr_options": ""
+    },
+    "application_mel_test": {
+      "root": "code/system_application",
+      "top": "top_mel_test",
+      "sources": [
+        "src/mel/*.v",
+        "src/ctrl/uart_tx.v",
+        "src/diag/diag_uart_report.v",
+        "src/diag/top_mel_test.v"
+      ],
+      "ip_cores": [],
+      "constraints": [
+        "constraints/top_mel_test.fdc"
+      ],
+      "copies": [
+        {
+          "source": "src/mel/exp_lut.hex",
+          "destination": "src/mel/exp_lut.hex"
+        },
+        {
+          "source": "src/mel/hann_q15.hex",
+          "destination": "src/mel/hann_q15.hex"
+        },
+        {
+          "source": "src/mel/log2_lut.hex",
+          "destination": "src/mel/log2_lut.hex"
+        },
+        {
+          "source": "src/mel/mel_coo.hex",
+          "destination": "src/mel/mel_coo.hex"
+        },
+        {
+          "source": "src/mel/twiddle_q15.hex",
+          "destination": "src/mel/twiddle_q15.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s10.hex",
+          "destination": "src/mel/twiddle_s10.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s11.hex",
+          "destination": "src/mel/twiddle_s11.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s2.hex",
+          "destination": "src/mel/twiddle_s2.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s3.hex",
+          "destination": "src/mel/twiddle_s3.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s4.hex",
+          "destination": "src/mel/twiddle_s4.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s5.hex",
+          "destination": "src/mel/twiddle_s5.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s6.hex",
+          "destination": "src/mel/twiddle_s6.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s7.hex",
+          "destination": "src/mel/twiddle_s7.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s8.hex",
+          "destination": "src/mel/twiddle_s8.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s9.hex",
+          "destination": "src/mel/twiddle_s9.hex"
+        }
+      ],
+      "uart_baud": 115200,
+      "pnr_options": ""
+    },
+    "application_core_only": {
+      "root": "code/system_application",
+      "top": "top_core_only",
+      "sources": [
+        "src/audio/*.v",
+        "src/ddr3/*.v",
+        "src/mel/*.v",
+        "src/npu/*.v",
+        "src/ip/*.v",
+        "src/ctrl/self_test.v",
+        "src/ctrl/sys_ctrl.v",
+        "src/ctrl/uart_debug.v",
+        "src/ctrl/uart_rx.v",
+        "src/ctrl/uart_tx.v",
+        "src/ctrl/weight_loader.v",
+        "src/ctrl/top_core_only.v"
+      ],
+      "ip_cores": [
+        "ipcore/pll_audio/pll_audio.idf",
+        "ipcore/ddr3_test/ddr3_test.idf"
+      ],
+      "constraints": [
+        "constraints/ddr3_100h.fdc",
+        "constraints/top_core_only.fdc"
+      ],
+      "copies": [
+        {
+          "source": "src/mel/exp_lut.hex",
+          "destination": "src/mel/exp_lut.hex"
+        },
+        {
+          "source": "src/mel/hann_q15.hex",
+          "destination": "src/mel/hann_q15.hex"
+        },
+        {
+          "source": "src/mel/log2_lut.hex",
+          "destination": "src/mel/log2_lut.hex"
+        },
+        {
+          "source": "src/mel/mel_coo.hex",
+          "destination": "src/mel/mel_coo.hex"
+        },
+        {
+          "source": "src/mel/twiddle_q15.hex",
+          "destination": "src/mel/twiddle_q15.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s10.hex",
+          "destination": "src/mel/twiddle_s10.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s11.hex",
+          "destination": "src/mel/twiddle_s11.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s2.hex",
+          "destination": "src/mel/twiddle_s2.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s3.hex",
+          "destination": "src/mel/twiddle_s3.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s4.hex",
+          "destination": "src/mel/twiddle_s4.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s5.hex",
+          "destination": "src/mel/twiddle_s5.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s6.hex",
+          "destination": "src/mel/twiddle_s6.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s7.hex",
+          "destination": "src/mel/twiddle_s7.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s8.hex",
+          "destination": "src/mel/twiddle_s8.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s9.hex",
+          "destination": "src/mel/twiddle_s9.hex"
+        }
+      ],
+      "uart_baud": 115200,
+      "pnr_options": ""
+    },
+    "application_rv_core": {
+      "root": "code/system_application",
+      "top": "top_rv_core",
+      "sources": [
+        "src/audio/*.v",
+        "src/ddr3/*.v",
+        "src/mel/*.v",
+        "src/npu/*.v",
+        "src/ip/*.v",
+        "src/ctrl/self_test.v",
+        "src/ctrl/sys_ctrl.v",
+        "src/ctrl/uart_debug.v",
+        "src/ctrl/uart_rx.v",
+        "src/ctrl/uart_tx.v",
+        "src/ctrl/weight_loader.v",
+        "src/ctrl/top_rv_core.v",
+        "src/cpu/rv32_cpu_subsys.sv",
+        "src/cpu/core/rv32_core.sv",
+        "src/cpu/core/rv32_decode.sv",
+        "src/cpu/core/rv32_alu.sv",
+        "src/cpu/core/rv32_muldiv.sv",
+        "src/cpu/core/rv32_btb.sv",
+        "src/cpu/core/rv32_machine.sv"
+      ],
+      "ip_cores": [
+        "ipcore/pll_audio/pll_audio.idf",
+        "ipcore/ddr3_test/ddr3_test.idf"
+      ],
+      "constraints": [
+        "constraints/ddr3_100h.fdc",
+        "constraints/top_core_only.fdc"
+      ],
+      "copies": [
+        {
+          "source": "src/mel/exp_lut.hex",
+          "destination": "src/mel/exp_lut.hex"
+        },
+        {
+          "source": "src/mel/hann_q15.hex",
+          "destination": "src/mel/hann_q15.hex"
+        },
+        {
+          "source": "src/mel/log2_lut.hex",
+          "destination": "src/mel/log2_lut.hex"
+        },
+        {
+          "source": "src/mel/mel_coo.hex",
+          "destination": "src/mel/mel_coo.hex"
+        },
+        {
+          "source": "src/mel/twiddle_q15.hex",
+          "destination": "src/mel/twiddle_q15.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s10.hex",
+          "destination": "src/mel/twiddle_s10.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s11.hex",
+          "destination": "src/mel/twiddle_s11.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s2.hex",
+          "destination": "src/mel/twiddle_s2.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s3.hex",
+          "destination": "src/mel/twiddle_s3.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s4.hex",
+          "destination": "src/mel/twiddle_s4.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s5.hex",
+          "destination": "src/mel/twiddle_s5.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s6.hex",
+          "destination": "src/mel/twiddle_s6.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s7.hex",
+          "destination": "src/mel/twiddle_s7.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s8.hex",
+          "destination": "src/mel/twiddle_s8.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s9.hex",
+          "destination": "src/mel/twiddle_s9.hex"
+        },
+        {
+          "source": "src/cpu/prog.hex",
+          "destination": "src/cpu/prog.hex"
+        }
+      ],
+      "uart_baud": 115200,
+      "pnr_options": ""
+    },
+    "application_pcm1808_diag": {
+      "root": "code/system_application",
+      "top": "top_pcm1808_probe",
+      "sources": [
+        "src/audio/i2s_slave_rx.v",
+        "src/audio/pcm1808_resampler.v",
+        "src/audio/pcm1808_coeff_rom.v",
+        "src/diag/diag_uart_report.v",
+        "src/ctrl/uart_tx.v",
+        "src/diag/top_pcm1808_probe.v"
+      ],
+      "ip_cores": [],
+      "constraints": [
+        "constraints/top_pcm1808_probe.fdc"
+      ],
+      "copies": [],
+      "uart_baud": 115200,
+      "pnr_options": ""
+    },
+    "application_emergency_demo": {
+      "root": "code/system_application",
+      "top": "top_emergency_demo",
+      "sources": [
+        "src/*.v",
+        "src/audio/*.v",
+        "src/ddr3/*.v",
+        "src/mel/*.v",
+        "src/npu/*.v",
+        "src/ui/*.v",
+        "src/hdmi/*.v",
+        "src/ctrl/*.v",
+        "src/ip/*.v",
+        "src/cpu/rv32_cpu_subsys.sv",
+        "src/cpu/core/rv32_core.sv",
+        "src/cpu/core/rv32_decode.sv",
+        "src/cpu/core/rv32_alu.sv",
+        "src/cpu/core/rv32_muldiv.sv",
+        "src/cpu/core/rv32_btb.sv",
+        "src/cpu/core/rv32_machine.sv",
+        "src/diag/top_emergency_demo.v"
+      ],
+      "ip_cores": [
+        "ipcore/pll/pll.idf",
+        "ipcore/pll_audio/pll_audio.idf",
+        "ipcore/ddr3_test/ddr3_test.idf"
+      ],
+      "constraints": [
+        "constraints/instrec_top.fdc",
+        "constraints/ddr3_100h.fdc",
+        "constraints/clock_groups_async.fdc"
+      ],
+      "copies": [
+        {
+          "source": "src/mel/exp_lut.hex",
+          "destination": "src/mel/exp_lut.hex"
+        },
+        {
+          "source": "src/mel/hann_q15.hex",
+          "destination": "src/mel/hann_q15.hex"
+        },
+        {
+          "source": "src/mel/log2_lut.hex",
+          "destination": "src/mel/log2_lut.hex"
+        },
+        {
+          "source": "src/mel/mel_coo.hex",
+          "destination": "src/mel/mel_coo.hex"
+        },
+        {
+          "source": "src/mel/twiddle_q15.hex",
+          "destination": "src/mel/twiddle_q15.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s10.hex",
+          "destination": "src/mel/twiddle_s10.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s11.hex",
+          "destination": "src/mel/twiddle_s11.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s2.hex",
+          "destination": "src/mel/twiddle_s2.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s3.hex",
+          "destination": "src/mel/twiddle_s3.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s4.hex",
+          "destination": "src/mel/twiddle_s4.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s5.hex",
+          "destination": "src/mel/twiddle_s5.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s6.hex",
+          "destination": "src/mel/twiddle_s6.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s7.hex",
+          "destination": "src/mel/twiddle_s7.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s8.hex",
+          "destination": "src/mel/twiddle_s8.hex"
+        },
+        {
+          "source": "src/mel/twiddle_s9.hex",
+          "destination": "src/mel/twiddle_s9.hex"
+        },
+        {
+          "source": "src/ui/class_labels.hex",
+          "destination": "src/ui/class_labels.hex"
+        },
+        {
+          "source": "src/ui/dashboard_ascii.hex",
+          "destination": "src/ui/dashboard_ascii.hex"
+        },
+        {
+          "source": "src/ui/dashboard_classes.hex",
+          "destination": "src/ui/dashboard_classes.hex"
+        },
+        {
+          "source": "src/ui/dashboard_font.hex",
+          "destination": "src/ui/dashboard_font.hex"
+        },
+        {
+          "source": "src/ui/dashboard_tiles.hex",
+          "destination": "src/ui/dashboard_tiles.hex"
+        },
+        {
+          "source": "src/ui/demo_confidence.hex",
+          "destination": "src/ui/demo_confidence.hex"
+        },
+        {
+          "source": "src/ui/demo_dashboard_ascii.hex",
+          "destination": "src/ui/demo_dashboard_ascii.hex"
+        },
+        {
+          "source": "src/ui/demo_dashboard_classes.hex",
+          "destination": "src/ui/demo_dashboard_classes.hex"
+        },
+        {
+          "source": "src/ui/demo_dashboard_font.hex",
+          "destination": "src/ui/demo_dashboard_font.hex"
+        },
+        {
+          "source": "src/ui/demo_dashboard_tiles.hex",
+          "destination": "src/ui/demo_dashboard_tiles.hex"
+        },
+        {
+          "source": "src/ui/font8x16.hex",
+          "destination": "src/ui/font8x16.hex"
+        },
+        {
+          "source": "src/cpu/prog.hex",
+          "destination": "src/cpu/prog.hex"
+        }
+      ],
+      "uart_baud": 115200,
+      "pnr_options": ""
+    }
+  }
+}

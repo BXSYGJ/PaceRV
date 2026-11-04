@@ -1,0 +1,9 @@
+.venv/
+**/build/
+**/__pycache__/
+**/.pytest_cache/
+*.pyc
+*.vvp
+*.lic
+.env
+.env.*

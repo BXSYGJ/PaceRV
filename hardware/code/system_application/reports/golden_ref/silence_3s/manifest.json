@@ -1,0 +1,242 @@
+{
+  "generator": "gen_golden_refs.py",
+  "format_version": 1,
+  "stem": "silence_3s",
+  "source_wav": "D:\\0000\\111\\001\\Pango\\ZGTC_RISC_CPU\\instrec_fpga\\tests\\fixtures\\silence_3s.wav",
+  "mel_tables": "D:\\0000\\111\\001\\Pango\\ZGTC_RISC_CPU\\instrec_fpga\\scripts\\outputs\\mel_tables.json",
+  "layer_contract": "D:\\0000\\111\\001\\Pango\\ZGTC_RISC_CPU\\instrec_fpga\\scripts\\outputs\\layer_contract.json",
+  "weights_image": {
+    "path": "D:\\0000\\111\\001\\Pango\\ZGTC_RISC_CPU\\instrec_fpga\\scripts\\outputs\\weights_image.bin",
+    "sha256": "19a74dbec29d3a0f16ab06dc30f70312849977de0c6b345710b046b1908f5d7a"
+  },
+  "wire_layer_map": {
+    "0x00": "MEL_Q8_8",
+    "0x01": "CONV1",
+    "0x02": "CONV2",
+    "0x03": "CONV3",
+    "0x04": "CONV4",
+    "0x05": "FC1",
+    "0x06": "FC2_LOGITS",
+    "0x07": "PROBS",
+    "0x08": "STATS"
+  },
+  "golden_top1": 1,
+  "files": {
+    "feat": {
+      "file": "feat.npy",
+      "dtype": "uint8",
+      "shape": [
+        64,
+        258
+      ],
+      "wire_layer_id": 0,
+      "contract_layer": "quant_stub_input",
+      "contract_layer_id": null,
+      "source": "golden_pipeline.run_mel_pipeline()['feat']",
+      "sha256": "6980cb2a81f50d24cf5b51ccb1f6b09f52d26945839fd00233c589f1d9c28986",
+      "note": "Mel feature, uint8 quint8 container, zp_in = 49"
+    },
+    "conv1": {
+      "file": "conv1.npy",
+      "dtype": "uint8",
+      "shape": [
+        48,
+        64,
+        258
+      ],
+      "wire_layer_id": 1,
+      "contract_layer": "conv1",
+      "contract_layer_id": 0,
+      "source": "golden_pipeline.npu_forward()['conv1'] (conv2d_int8)",
+      "sha256": "faed6da8eb7947ae602d3a685cb48d084ce99b797e8e803c67c67ee437fa1727"
+    },
+    "conv2": {
+      "file": "conv2.npy",
+      "dtype": "uint8",
+      "shape": [
+        96,
+        32,
+        129
+      ],
+      "wire_layer_id": 2,
+      "contract_layer": "conv2",
+      "contract_layer_id": 1,
+      "source": "golden_pipeline.npu_forward()['conv2'] (conv2d_int8)",
+      "sha256": "292d4900fb643194973132bf29e122687c3f55440881d5cf2f321a2bdbfd213a"
+    },
+    "conv3": {
+      "file": "conv3.npy",
+      "dtype": "uint8",
+      "shape": [
+        192,
+        16,
+        64
+      ],
+      "wire_layer_id": 3,
+      "contract_layer": "conv3",
+      "contract_layer_id": 2,
+      "source": "golden_pipeline.npu_forward()['conv3'] (conv2d_int8)",
+      "sha256": "4d3d5697d8493176cc89e3acec03eda987684750d3b19495abeb75ac5dbdb69f"
+    },
+    "conv4": {
+      "file": "conv4.npy",
+      "dtype": "uint8",
+      "shape": [
+        256,
+        8,
+        32
+      ],
+      "wire_layer_id": 4,
+      "contract_layer": "conv4",
+      "contract_layer_id": 3,
+      "source": "golden_pipeline.npu_forward()['conv4'] (conv2d_int8)",
+      "sha256": "949ea6f8b296eca023c4b566858eb31bb4f92060270ea23195999f862790f622"
+    },
+    "pool1": {
+      "file": "pool1.npy",
+      "dtype": "uint8",
+      "shape": [
+        48,
+        32,
+        129
+      ],
+      "wire_layer_id": null,
+      "contract_layer": null,
+      "contract_layer_id": null,
+      "source": "golden_pipeline.npu_forward()['pool1'] (maxpool2x2_floor)",
+      "sha256": "bbf02d41c4bc6aa92c2a59e49bfe0dbf193160269f1e1079e019712e28747fec"
+    },
+    "pool2": {
+      "file": "pool2.npy",
+      "dtype": "uint8",
+      "shape": [
+        96,
+        16,
+        64
+      ],
+      "wire_layer_id": null,
+      "contract_layer": null,
+      "contract_layer_id": null,
+      "source": "golden_pipeline.npu_forward()['pool2'] (maxpool2x2_floor)",
+      "sha256": "c3838f2d1d3eb2ca7f4fae5d245cf612fa824829b937ff343b177b2a78cacede"
+    },
+    "pool3": {
+      "file": "pool3.npy",
+      "dtype": "uint8",
+      "shape": [
+        192,
+        8,
+        32
+      ],
+      "wire_layer_id": null,
+      "contract_layer": null,
+      "contract_layer_id": null,
+      "source": "golden_pipeline.npu_forward()['pool3'] (maxpool2x2_floor)",
+      "sha256": "ca72528e47549ce41cc0817123fcce904969d4432513e2999d621bf6920ef69f"
+    },
+    "pool4": {
+      "file": "pool4.npy",
+      "dtype": "uint8",
+      "shape": [
+        256,
+        4,
+        16
+      ],
+      "wire_layer_id": null,
+      "contract_layer": null,
+      "contract_layer_id": null,
+      "source": "golden_pipeline.npu_forward()['pool4'] (maxpool2x2_floor)",
+      "sha256": "450eaba620d92ad39b438fba505ae84d80ea45700eb65919e2cb858670016d26"
+    },
+    "gap": {
+      "file": "gap.npy",
+      "dtype": "int32",
+      "shape": [
+        256
+      ],
+      "wire_layer_id": null,
+      "contract_layer": null,
+      "contract_layer_id": null,
+      "source": "golden_pipeline.npu_forward()['gap'] (gap_s32, int64 -> int32)",
+      "sha256": "4c7dbc1b12b7d95c60e71c6818e0c21c6a8c58c70c9656c1bb1157468bb60f48",
+      "note": "fc1 input requant (conv4 output scale/zp), 4x16=64 taps >> 6"
+    },
+    "fc1": {
+      "file": "fc1.npy",
+      "dtype": "uint8",
+      "shape": [
+        128
+      ],
+      "wire_layer_id": 5,
+      "contract_layer": "fc1",
+      "contract_layer_id": 4,
+      "source": "golden_pipeline.npu_forward()['fc1'] (fc_int8, ReLU rail)",
+      "sha256": "17258d7ced9361cc53918a4680f6175e6a50d5b12038fa5beac2dc9bda2165da"
+    },
+    "fc2_logits": {
+      "file": "fc2_logits.npy",
+      "dtype": "int32",
+      "shape": [
+        8
+      ],
+      "wire_layer_id": 6,
+      "contract_layer": "fc2",
+      "contract_layer_id": 5,
+      "source": "golden_pipeline.npu_forward()['logits'] (fc2_u8 - zp_out=57, int32)",
+      "sha256": "c3520402fa866cc5397cff523987d0ad330d971c4032091cd0ef2df26bcf777d",
+      "note": "signed container value, NOT the u8 logits array"
+    },
+    "probs": {
+      "file": "probs.npy",
+      "dtype": "uint16",
+      "shape": [
+        8
+      ],
+      "wire_layer_id": 7,
+      "contract_layer": null,
+      "contract_layer_id": null,
+      "source": "golden_pipeline.npu_forward()['probs_q16'] (softmax_fixed Q0.16, int64 -> uint16)",
+      "sha256": "232f9b8e6174788b8421ba704580c0c9975dec6a6238f5c2cce256b03709888c",
+      "note": "Q0.16 fixed-point probabilities (0..65535)"
+    },
+    "probs_float": {
+      "file": "probs_float.npy",
+      "dtype": "float64",
+      "shape": [
+        8
+      ],
+      "wire_layer_id": 7,
+      "contract_layer": null,
+      "contract_layer_id": null,
+      "source": "golden_pipeline.npu_forward()['probs'] (Q0.16 / 65536)",
+      "sha256": "d8a9e8090c33b497566531b22708606ec7ac154dc1451f24d51d7a7d1e57cbc6",
+      "note": "human-readable copy; not an integer wire reference"
+    },
+    "probs_u8_percent": {
+      "file": "probs_u8_percent.npy",
+      "dtype": "uint8",
+      "shape": [
+        8
+      ],
+      "wire_layer_id": 7,
+      "contract_layer": null,
+      "contract_layer_id": null,
+      "source": "compare_layers.encode_probs(npu, 'percent')",
+      "sha256": "0f27b7fba43601409b0fcc72e93ca851f2c4892a0adefa6dd8e3fff55d30d737",
+      "note": "u8 wire encoding selected by --probs-encoding percent (default)"
+    },
+    "probs_u8_q0_8": {
+      "file": "probs_u8_q0_8.npy",
+      "dtype": "uint8",
+      "shape": [
+        8
+      ],
+      "wire_layer_id": 7,
+      "contract_layer": null,
+      "contract_layer_id": null,
+      "source": "compare_layers.encode_probs(npu, 'q0.8')",
+      "sha256": "e70fd7c5a96530e5d649f0490d07ff21dcb3213c6a9869ca95ee1bb5ff3bcaca",
+      "note": "u8 wire encoding selected by --probs-encoding q0.8"
+    }
+  }
+}

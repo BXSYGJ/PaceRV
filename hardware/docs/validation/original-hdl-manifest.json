@@ -1,0 +1,847 @@
+[
+  {
+    "path": "code/bare_cpu/efficiency_145125/fpga/rv32_pll.sv",
+    "bytes": 2803,
+    "sha256": "edd8a3a04c0ce1a72944ca4d01e37f7fba38f924cf04a1136f9583baf1eecfd1"
+  },
+  {
+    "path": "code/bare_cpu/efficiency_145125/rtl/rv32_alu.sv",
+    "bytes": 1751,
+    "sha256": "49a04f0be6a98c3749d96607cb7aed17c846eaa462ee322fe90174daeaeaa5c5"
+  },
+  {
+    "path": "code/bare_cpu/efficiency_145125/rtl/rv32_board_top.sv",
+    "bytes": 2257,
+    "sha256": "183a9672618f5a82ba98fed1b77314abc21d52741c4c82442bda0a2ddcd39629"
+  },
+  {
+    "path": "code/bare_cpu/efficiency_145125/rtl/rv32_btb.sv",
+    "bytes": 9172,
+    "sha256": "1dfa984beeb181d992a22f15357f806d29fcc2357f0fc99cdd10b4e256a41c6b"
+  },
+  {
+    "path": "code/bare_cpu/efficiency_145125/rtl/rv32_burst_arbiter.sv",
+    "bytes": 3738,
+    "sha256": "82104b39f85d2942e3d0a6780f79099062cc5a4f71fdf87491191de2f632c8af"
+  },
+  {
+    "path": "code/bare_cpu/efficiency_145125/rtl/rv32_burst_ram.sv",
+    "bytes": 3690,
+    "sha256": "089b3788fa87d3176a4e0b09e40382e1349cc33e8f9d2227d567ad0788672417"
+  },
+  {
+    "path": "code/bare_cpu/efficiency_145125/rtl/rv32_cache.sv",
+    "bytes": 38043,
+    "sha256": "0a5ebc8fe748f4c0a365397750308f9ec66d9f86dfb89814d83a4513aa92602d"
+  },
+  {
+    "path": "code/bare_cpu/efficiency_145125/rtl/rv32_core.sv",
+    "bytes": 43261,
+    "sha256": "020d7ed235bd5635e103ebc22676e18d197ff2a2dc2d3fee5841f81673c403c4"
+  },
+  {
+    "path": "code/bare_cpu/efficiency_145125/rtl/rv32_decode.sv",
+    "bytes": 4765,
+    "sha256": "9cb2b57b46ed775d85b6e70a3eebe92c2d5e49e9a6483993109e2c096d9a3ff3"
+  },
+  {
+    "path": "code/bare_cpu/efficiency_145125/rtl/rv32_fifo.sv",
+    "bytes": 1292,
+    "sha256": "20bb573cdbae386a8b44df780eefc11b85323cf2bbaa4fb2073a5e87e626b2eb"
+  },
+  {
+    "path": "code/bare_cpu/efficiency_145125/rtl/rv32_machine.sv",
+    "bytes": 4464,
+    "sha256": "56b542e419c58216a08b0a5c83322506e42e2721fa28db50a6454ebe29607abd"
+  },
+  {
+    "path": "code/bare_cpu/efficiency_145125/rtl/rv32_memory_system.sv",
+    "bytes": 13743,
+    "sha256": "1e4bf5462dc62dea248f34c77ba0a5b9e1785adabd6432632a5eda547397cce5"
+  },
+  {
+    "path": "code/bare_cpu/efficiency_145125/rtl/rv32_muldiv.sv",
+    "bytes": 5734,
+    "sha256": "56df00aa87c39074739d529b87ff8776e445d081f8e52ddcb8bc7ba07ebd5b51"
+  },
+  {
+    "path": "code/bare_cpu/efficiency_145125/rtl/rv32_peripherals.sv",
+    "bytes": 12058,
+    "sha256": "3c7f97a9af414197bdffc568bbe604c289a267c07c35db0a64aaba7f9f102664"
+  },
+  {
+    "path": "code/bare_cpu/efficiency_145125/rtl/rv32_rvc_expand.sv",
+    "bytes": 7540,
+    "sha256": "308ac8a65c9e29aeec27b38417483d0f43fd7c54487c26e89a3fa54b4647951b"
+  },
+  {
+    "path": "code/bare_cpu/efficiency_145125/rtl/rv32_rvc_frontend.sv",
+    "bytes": 12132,
+    "sha256": "0bc9d6bd8c974d3a934979bab13d481a911ffd5e7e71f00c5a427eff75fa9cd8"
+  },
+  {
+    "path": "code/bare_cpu/efficiency_145125/rtl/rv32_soc.sv",
+    "bytes": 7409,
+    "sha256": "df93072f9918c0bff5b5ac96b238ea4ab08233265e2685b3341cc5478c344947"
+  },
+  {
+    "path": "code/bare_cpu/efficiency_145125/rtl/rv32_uart.sv",
+    "bytes": 3248,
+    "sha256": "b83f5d6055bd794ca49e3781e673a00749249eaeaf1f2e908398dd5ce54ab8a2"
+  },
+  {
+    "path": "code/bare_cpu/efficiency_145125/rtl/rv32_uncached.sv",
+    "bytes": 4025,
+    "sha256": "d276e6b38ddb05117f52e054367f7f3d4503ba76f8f49025973197943ef50907"
+  },
+  {
+    "path": "code/bare_cpu/performance_155250/fpga/rv32_pll.sv",
+    "bytes": 2803,
+    "sha256": "edd8a3a04c0ce1a72944ca4d01e37f7fba38f924cf04a1136f9583baf1eecfd1"
+  },
+  {
+    "path": "code/bare_cpu/performance_155250/rtl/rv32_alu.sv",
+    "bytes": 1751,
+    "sha256": "49a04f0be6a98c3749d96607cb7aed17c846eaa462ee322fe90174daeaeaa5c5"
+  },
+  {
+    "path": "code/bare_cpu/performance_155250/rtl/rv32_board_top.sv",
+    "bytes": 2257,
+    "sha256": "183a9672618f5a82ba98fed1b77314abc21d52741c4c82442bda0a2ddcd39629"
+  },
+  {
+    "path": "code/bare_cpu/performance_155250/rtl/rv32_btb.sv",
+    "bytes": 7517,
+    "sha256": "4e7c61716c3e3f3156e8a1006824354b3428bbbc98a37369e43bae12f0170a3c"
+  },
+  {
+    "path": "code/bare_cpu/performance_155250/rtl/rv32_burst_arbiter.sv",
+    "bytes": 3738,
+    "sha256": "82104b39f85d2942e3d0a6780f79099062cc5a4f71fdf87491191de2f632c8af"
+  },
+  {
+    "path": "code/bare_cpu/performance_155250/rtl/rv32_burst_ram.sv",
+    "bytes": 3690,
+    "sha256": "089b3788fa87d3176a4e0b09e40382e1349cc33e8f9d2227d567ad0788672417"
+  },
+  {
+    "path": "code/bare_cpu/performance_155250/rtl/rv32_cache.sv",
+    "bytes": 34537,
+    "sha256": "bb6e3fe7e51a8f259e1c7dabe47e018cb5cea86c495b99bc6ce4f496cb0afff3"
+  },
+  {
+    "path": "code/bare_cpu/performance_155250/rtl/rv32_core.sv",
+    "bytes": 42435,
+    "sha256": "11c2d7175afbc0753178c6d992f4d7497ab197a7ac1b3f1cba8a2952935a056a"
+  },
+  {
+    "path": "code/bare_cpu/performance_155250/rtl/rv32_decode.sv",
+    "bytes": 4765,
+    "sha256": "9cb2b57b46ed775d85b6e70a3eebe92c2d5e49e9a6483993109e2c096d9a3ff3"
+  },
+  {
+    "path": "code/bare_cpu/performance_155250/rtl/rv32_fifo.sv",
+    "bytes": 1292,
+    "sha256": "20bb573cdbae386a8b44df780eefc11b85323cf2bbaa4fb2073a5e87e626b2eb"
+  },
+  {
+    "path": "code/bare_cpu/performance_155250/rtl/rv32_machine.sv",
+    "bytes": 4464,
+    "sha256": "56b542e419c58216a08b0a5c83322506e42e2721fa28db50a6454ebe29607abd"
+  },
+  {
+    "path": "code/bare_cpu/performance_155250/rtl/rv32_memory_system.sv",
+    "bytes": 13584,
+    "sha256": "0f408d7b59d45bec6623eb62baebdc259197a6e10b4d92556b4c3494a5441537"
+  },
+  {
+    "path": "code/bare_cpu/performance_155250/rtl/rv32_muldiv.sv",
+    "bytes": 5618,
+    "sha256": "ea669ef9701bba4b2adbf6ff40c9e4e805620ec79de6cbdb323bbebeeac4fe59"
+  },
+  {
+    "path": "code/bare_cpu/performance_155250/rtl/rv32_peripherals.sv",
+    "bytes": 8881,
+    "sha256": "559c92899109c7f1d15c7ba2639a860bd4da83aaded5d158923f6122f8ee6e9e"
+  },
+  {
+    "path": "code/bare_cpu/performance_155250/rtl/rv32_rvc_expand.sv",
+    "bytes": 7540,
+    "sha256": "308ac8a65c9e29aeec27b38417483d0f43fd7c54487c26e89a3fa54b4647951b"
+  },
+  {
+    "path": "code/bare_cpu/performance_155250/rtl/rv32_rvc_frontend.sv",
+    "bytes": 8608,
+    "sha256": "77d7f21f153570b83d156a7b2fb3485f08da1225719a22d11074e8fa886708c7"
+  },
+  {
+    "path": "code/bare_cpu/performance_155250/rtl/rv32_soc.sv",
+    "bytes": 7053,
+    "sha256": "4a9b81a7ce52b2239b77db16e21e32cf7fe208db0a918009cf922a54b13a6be5"
+  },
+  {
+    "path": "code/bare_cpu/performance_155250/rtl/rv32_uart.sv",
+    "bytes": 3248,
+    "sha256": "b83f5d6055bd794ca49e3781e673a00749249eaeaf1f2e908398dd5ce54ab8a2"
+  },
+  {
+    "path": "code/bare_cpu/performance_155250/rtl/rv32_uncached.sv",
+    "bytes": 4025,
+    "sha256": "d276e6b38ddb05117f52e054367f7f3d4503ba76f8f49025973197943ef50907"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/ddr3_test.v",
+    "bytes": 20596,
+    "sha256": "88ed5f176768d7446c90293f24c650fd0b86ab8c62e0f85382c9f57f23e5a1dc"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/ddr3_test_ddrphy_top.v",
+    "bytes": 50446,
+    "sha256": "184d246c87a3c1866663a52521cb575a62cc60a6414a55749e9d74a18118fba2"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/ddrphy/ddr3_test_slice_top_v1_10.v",
+    "bytes": 48989,
+    "sha256": "fc67c08e65776ee78c056c0d7b4258951aee16015608f7f49223f64eaddd8629"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/ddrphy/ips2l_ddrphy_calib_mux_v1_0.vp",
+    "bytes": 13948,
+    "sha256": "676e36319e7ce80b93e3543e255d53708d9fc71606587a6e692eab1ec82ecaed"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/ddrphy/ips2l_ddrphy_calib_top_v1_10.vp",
+    "bytes": 29035,
+    "sha256": "04faf434cef120b5d712911dfc97c8f498901b0679fba720b806f596d688bded"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/ddrphy/ips2l_ddrphy_control_path_adj_v1_10.vp",
+    "bytes": 8870,
+    "sha256": "8cdd7b9ec01c143882217b038cbf840d77e52ee3037e629e75e10b03fc223a38"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/ddrphy/ips2l_ddrphy_cpd_ctrl_v1_3.vp",
+    "bytes": 12614,
+    "sha256": "56f52683adbe720c7d43da1a9f199f4ab3add3f3b5960e3f687f87f60267c161"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/ddrphy/ips2l_ddrphy_cpd_lock_v1_0.vp",
+    "bytes": 3988,
+    "sha256": "a6696f8e79e2d132a6e76ad4997d5366d6c9cf8f05c60f77feff1b47b50d0090"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/ddrphy/ips2l_ddrphy_data_slice_dqs_gate_cal_v1_10.vp",
+    "bytes": 7140,
+    "sha256": "8764275d4eeb8d1765b3a09aba527d6d3bf3e46f5e1d17eefc685d7e0dbe1520"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/ddrphy/ips2l_ddrphy_data_slice_v1_10.vp",
+    "bytes": 43859,
+    "sha256": "e13e33d97ecbfea1838c4dd28e7f9f1c57dcb974606179523be46bba75344d50"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/ddrphy/ips2l_ddrphy_data_slice_wrcal_v1_10.vp",
+    "bytes": 20167,
+    "sha256": "b7a9757c252f74c4b57eb0fb74738c57e4eed3e669ddd7ffeeca1acedd330b2e"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/ddrphy/ips2l_ddrphy_data_slice_wrlvl_v1_10.vp",
+    "bytes": 21219,
+    "sha256": "871874f4af0f068571416916898f83eb07052e6e015c5800ffdf65d67620cf7e"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/ddrphy/ips2l_ddrphy_dfi_v1_3.vp",
+    "bytes": 23431,
+    "sha256": "9828a1ef43a864d287a7a317910fe330bfc904f44e8f60c8773aafa1d8c1534e"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/ddrphy/ips2l_ddrphy_dll_update_ctrl_v1_3.vp",
+    "bytes": 8102,
+    "sha256": "bc4e8f402d2fb98920e050a3c1514d44ec959877217d7865a30b22b7da73cac6"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/ddrphy/ips2l_ddrphy_dqs_gate_coarse_cal_v1_0.vp",
+    "bytes": 11936,
+    "sha256": "950a0010929854894c2c92d9f3f8e9dce0fee6985fee70d4160540a058853ede"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/ddrphy/ips2l_ddrphy_dqs_rddata_align_v1_10.vp",
+    "bytes": 39545,
+    "sha256": "c0cab4287a7a7b6b720977c1c5f9259c5f48f8da18e9a3ca1173a073b1ccf025"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/ddrphy/ips2l_ddrphy_dqsi_rdel_cal_v1_3.vp",
+    "bytes": 29297,
+    "sha256": "ef7e57755ab7558b1b518aa73999384368f349efe7077cf9283e0911e711ac1a"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/ddrphy/ips2l_ddrphy_drift_ctrl_v1_0.vp",
+    "bytes": 7226,
+    "sha256": "8ea99ac6decf6fe14c0585b4f121d7a1acc17290d7a1c68725d984e704e277bc"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/ddrphy/ips2l_ddrphy_eyecal_v1_5.vp",
+    "bytes": 16271,
+    "sha256": "31977dd34339d163ecbd8b9949ac4b65f0eaa6fbcd9a75d787400ae73f7f51d2"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/ddrphy/ips2l_ddrphy_gate_update_ctrl_v1_3.vp",
+    "bytes": 6262,
+    "sha256": "ce20eb3b9cbe3b392d8be0aa1d6787247bc7b2d91af36a1f734f35c9eb03d642"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/ddrphy/ips2l_ddrphy_gatecal_v1_10.vp",
+    "bytes": 17323,
+    "sha256": "b6859250ca098e81ff05bcab08dfe8ffee77648218e90c040a1dd3838a0671f2"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/ddrphy/ips2l_ddrphy_gpll_phase_v1_0.vp",
+    "bytes": 3812,
+    "sha256": "ef8ebe3742d23848bd2a1492d4901f886ce49aa98dbc295873b67e4116ba8524"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/ddrphy/ips2l_ddrphy_info_v1_0.vp",
+    "bytes": 12042,
+    "sha256": "0794201be97885e7695a16b6c35848655b08c4bf191405d26417126512ce4aa8"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/ddrphy/ips2l_ddrphy_init_v1_0.vp",
+    "bytes": 43375,
+    "sha256": "817f9f32b2260a4c35af446e89ff4c2d4b065381b25cb2020c538d22b4a45088"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/ddrphy/ips2l_ddrphy_main_ctrl_v1_10.vp",
+    "bytes": 13750,
+    "sha256": "39d5024d7364b441340b131d265d0648d8b7c1f92cc417424d7c584413c5f4a6"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/ddrphy/ips2l_ddrphy_rdcal_v1_10.vp",
+    "bytes": 56971,
+    "sha256": "6b4c7f3c24a4750ac69b4e7882617105c6e31f02da712aaa87932b8561ccea2b"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/ddrphy/ips2l_ddrphy_reset_ctrl_v1_3.vp",
+    "bytes": 19445,
+    "sha256": "17189b59ed5307c4a27ec35485b33af5c98a89e6ee7f9c5d85aaed9c03a77163"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/ddrphy/ips2l_ddrphy_rst_clk_phase_adj_v1_0.vp",
+    "bytes": 7292,
+    "sha256": "dd1dbae71726d968df475fe7fbb2b7321411fa67786092c0dc2e065edcf39382"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/ddrphy/ips2l_ddrphy_rst_debounce_v1_0.vp",
+    "bytes": 4580,
+    "sha256": "bff7ed95c8d305dfb88e6002c6de8453a21c72c03a5a0521a76ddd105598dc4d"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/ddrphy/ips2l_ddrphy_slice_rddata_align_v1_0.vp",
+    "bytes": 6878,
+    "sha256": "befb44f07d851524109a6dc8e17c5b8062694aa274ed8dbc4f7326b8fe1c443e"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/ddrphy/ips2l_ddrphy_training_ctrl_v1_0.vp",
+    "bytes": 4908,
+    "sha256": "777e8ee9d8d819fdcf04b39b5a5d6086c52369a7f19f04dbd0d06f7a7d3d6110"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/ddrphy/ips2l_ddrphy_upcal_v1_0.vp",
+    "bytes": 10182,
+    "sha256": "afbca3503da609f7951ad7fbef386bd007f403c89f52377211ba521967c94455"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/ddrphy/ips2l_ddrphy_wdata_path_adj_v1_10.vp",
+    "bytes": 16469,
+    "sha256": "85f625ed4a09964442e8616074eea9e4757e43b4217589bb9e2f289c9748b272"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/ddrphy/ips2l_ddrphy_wrcal_v1_7.vp",
+    "bytes": 37069,
+    "sha256": "0a8cb0bb70bd40809260c50bcb85d092c16fea5d9ab2e4fbbe647ccbd1bfb1b0"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/ddrphy/ips2l_ddrphy_wrlvl_v1_0.vp",
+    "bytes": 12764,
+    "sha256": "00c086bd729be3ab8287f6eb786cfb3549c97aa92f8465c608b8fc2477df3edc"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/ips2l_rst_sync_v1_3.vp",
+    "bytes": 3024,
+    "sha256": "64b8d83f15f2ff373e6b1040405c42051d8761bd1857dec719c884c2eb59361a"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/distributed_fifo/ips2l_distributed_fifo_v1_0.vp",
+    "bytes": 7838,
+    "sha256": "d6c0b0d8560b0f22128b4883933944fc686fd7597cfea0d6c545cc6af56c0b7a"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/distributed_fifo/rtl/ips2l_distributed_fifo_ctr_v1_0.vp",
+    "bytes": 18809,
+    "sha256": "fe31c8f44bea653ab20bb1830ad4f8ed41566e9cfef354bd5e2d48c7682f353d"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/distributed_fifo/rtl/ips2l_distributed_fifo_v1_0_distributed_fifo_v1_0.vp",
+    "bytes": 7708,
+    "sha256": "867ac91a1485dfe613a81f372d788e784bba8cd4b0497e56986135e92685ba73"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/distributed_fifo/rtl/ips2l_distributed_sdpram_v1_0_distributed_fifo_v1_0.vp",
+    "bytes": 6854,
+    "sha256": "3561bbbbd4e4432a538c3d20818d262b4f1e5517c48296f6b1b4cc8afdd19aef"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/ips2l_mcdq_apb_cross_v1_2.vp",
+    "bytes": 9592,
+    "sha256": "62f7d55354a8afe4d02bc6f6d6dc30fc8e9960d3b21709988b887acc99d09cf5"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/ips2l_mcdq_calib_delay_v1_2.vp",
+    "bytes": 6590,
+    "sha256": "a52e992b9766b6cb22ed23aa01d1cc5ac9b6a429a8e49de7a13ac51dd70e9784"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/ips2l_mcdq_cfg_apb_v1_2.vp",
+    "bytes": 42389,
+    "sha256": "482cb280a614f70209f1d07892fdd773a259d2ca0f23e8f38b85a9faf00513b9"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/ips2l_mcdq_dcd_bm_v1_2.vp",
+    "bytes": 17651,
+    "sha256": "bfbd472dd8b427fe6b003dd510f73db89f915ac92d31fe8a779c40f9d4e56bee"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/ips2l_mcdq_dcd_rowaddr_v1_2.vp",
+    "bytes": 4580,
+    "sha256": "4ac4721747b13020e1895be6265e55df90968f05beb8056279589039394bb9be"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/ips2l_mcdq_dcd_sm_v1_2.vp",
+    "bytes": 15064,
+    "sha256": "d7e710e3ed4d1807fb0bdd4d84c264817247a4da41123c72439c555573821f49"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/ips2l_mcdq_dcd_top_v1_2.vp",
+    "bytes": 12330,
+    "sha256": "26ab4e142f555602c023f62b19df52056c6d51da5052401254066cae0655ddaa"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/ips2l_mcdq_dcp_back_ctrl_v1_2.vp",
+    "bytes": 48957,
+    "sha256": "fe7b340b41d80ec7428cc38329a41864bcf5c209a6310610d09c7bc8579e541f"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/ips2l_mcdq_dcp_buf_v1_2.vp",
+    "bytes": 22007,
+    "sha256": "dab35fa172243ecbb5426a8ebccc2c168368ea0a6ea0558c909b815d781b17d6"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/ips2l_mcdq_dcp_out_v1_2.vp",
+    "bytes": 15064,
+    "sha256": "9471082e23170b144dc619f7f7e08c94b8a03378f72da388f744d6acb728928b"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/ips2l_mcdq_dcp_top_v1_2.vp",
+    "bytes": 24371,
+    "sha256": "21b1f0e3b4660e1078b47000bfe50022346414f5d5e713ac9e522a4f39f76548"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/ips2l_mcdq_dfi_v1_2.vp",
+    "bytes": 32495,
+    "sha256": "abf138d692e634fabe5f569b98d897dfece8a8ae66cee1dba830a56d7e255df1"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/ips2l_mcdq_lp_v1_2.vp",
+    "bytes": 23123,
+    "sha256": "7a80ccb1e053e5c9d8f389169359570f256d709ff2e4ad2c51fda7a7a6a4239d"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/ips2l_mcdq_mrs_v1_2.vp",
+    "bytes": 23735,
+    "sha256": "f78133bc021a57cf469773daaf102817fc37069447e8accc80afa1f4b20b0ad6"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/ips2l_mcdq_prefetch_fifo_v1_2.vp",
+    "bytes": 6044,
+    "sha256": "ee3aa91e980fb3dd08231cf1806a28edf759f4ea8248adfd44407d607519b9e4"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/ips2l_mcdq_rdatapath_v1_2.vp",
+    "bytes": 5212,
+    "sha256": "72dd8ece021f4ee74fd576c1628c4f7d3606ef632f0e68b9569a288a092a6b0f"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/ips2l_mcdq_reg_fifo2_v1_2.vp",
+    "bytes": 4818,
+    "sha256": "bc9cff65e4002a51af0c20c2f0a9b9f17dacde5157b58691bbfb1c44348ee08a"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/ips2l_mcdq_ui_axi_v1_2a.vp",
+    "bytes": 19885,
+    "sha256": "145b69395412be2553835f9278cdf1cb1703d3beeb914abf7d985e3c69f817fb"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/ips2l_mcdq_wdatapath_v1_2.vp",
+    "bytes": 11760,
+    "sha256": "db648e90ff607ca2f9e2b5cca048de417439888d0b906288e0cec7cf038d9dee"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/ips2l_mcdq_wdp_align_v1_2.vp",
+    "bytes": 9722,
+    "sha256": "1645e9eb7fac3c9c13cd3e0d7367f132293f9cec16835ce188c6345993d2b730"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/ips2l_mcdq_wdp_dcp_v1_2.vp",
+    "bytes": 9132,
+    "sha256": "3f30be0f49f78f09915743995c950fa6ff8de5f14598ebc8802e73b5c6d140ee"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/ips2l_mcdq_wrapper_v1_2b.vp",
+    "bytes": 47013,
+    "sha256": "d35010f49be551fb15ab2655cbeffcaaaa74fdf3ccb0754b033fc979d615e805"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/syn_mod/ips2l_mcdq_com_timing_v1_2.vp",
+    "bytes": 6636,
+    "sha256": "e3f19c4be6352ab64f07426973387f2876c540ee992f6eac9d3f2d470b3d49c2"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/syn_mod/ips2l_mcdq_tfaw_timing_v1_2.vp",
+    "bytes": 8738,
+    "sha256": "c632619f042bebb4f059df7f20eee90eb2b51b81210430cb37d01958ad3cd30f"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/syn_mod/ips2l_mcdq_tfaw_v1_2.vp",
+    "bytes": 4074,
+    "sha256": "ab87b7718bffc4fb2a2b27765576187f09b5266bbca7fc393c43c6dec96ff379"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/syn_mod/ips2l_mcdq_timing_act2wr_pass_v1_2.vp",
+    "bytes": 7642,
+    "sha256": "1b3874b059923481f292ba382ad156f7dcdd9ad39da6c86dddd480290ccce498"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/syn_mod/ips2l_mcdq_timing_act_pass_v1_2.vp",
+    "bytes": 5892,
+    "sha256": "9f32b6936e039c15f7b07b74480179d39d1b3787965e1b90bd067a7ede7fdd4c"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/syn_mod/ips2l_mcdq_timing_pre_pass_v1_2.vp",
+    "bytes": 10248,
+    "sha256": "e40a64caec9725c231cd88dde69973eab3aca38c9d2e66a2c5c0bbddf3103ae0"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/syn_mod/ips2l_mcdq_timing_rd_pass_v1_2.vp",
+    "bytes": 8652,
+    "sha256": "78b1de719a43ee0fc80e1a5464f7284439d91f1d4b3f83ef2ae5611920293988"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/syn_mod/ips2l_mcdq_timing_ref_pass_v1_2.vp",
+    "bytes": 5672,
+    "sha256": "c79dde6f9a682c55aff7bb89c4863f76a069b874fb154dff7d3e4d4a7a88f9d1"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/syn_mod/ips2l_mcdq_timing_wr_pass_v1_2.vp",
+    "bytes": 8626,
+    "sha256": "ea3470ca984554d4908ec950314f9242042417c6c4c6b3fd05ac5d6daab98c90"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/mcdq_ctrl/syn_mod/ips2l_mcdq_trc_timing_v1_2.vp",
+    "bytes": 10424,
+    "sha256": "7234241e5968f91ec6e396794f0bb80f6c7d1bca2038aa004d5078d3937953da"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/pll/ips2l_ddrphy_gpll_v1_3.vp",
+    "bytes": 8324,
+    "sha256": "3fecc367573a4b5bd158e1a8ff106c5c401c5f180143e8e5abe6bb068e5078d2"
+  },
+  {
+    "path": "code/system_application/ipcore/ddr3_test/rtl/pll/ips2l_ddrphy_ppll_v1_0.vp",
+    "bytes": 17323,
+    "sha256": "34bb46106b84eab147f130bd7526f1486d35caeb40b0258cd59656e50d19dddd"
+  },
+  {
+    "path": "code/system_application/ipcore/pll/pll.v",
+    "bytes": 8383,
+    "sha256": "d9bb599f4938b595bd388ea9011f19197fc2877cce10ffd084f29d71b9647614"
+  },
+  {
+    "path": "code/system_application/src/audio/audio_cdc_fifo.v",
+    "bytes": 3910,
+    "sha256": "6348a26a83b96032ecbbb5bfda8f2c70eca27f78de4c18ec3bea1966df08a7e1"
+  },
+  {
+    "path": "code/system_application/src/audio/audio_sink.v",
+    "bytes": 12223,
+    "sha256": "075d29cd211a73754737e7d505c070f058d5566931830fa3b912c05e4920faec"
+  },
+  {
+    "path": "code/system_application/src/audio/i2s_slave_rx.v",
+    "bytes": 2505,
+    "sha256": "67b08991a80b0efeb92e5a8ff0dbe781b84ce91231d82a5c14208b6da5b8acab"
+  },
+  {
+    "path": "code/system_application/src/audio/pcm1808_coeff_rom.v",
+    "bytes": 329515,
+    "sha256": "69ce3e5d915ad9308f423f0402d97ede8248b8a8a235bb33ec38324cfb8ed8ff"
+  },
+  {
+    "path": "code/system_application/src/audio/pcm1808_resampler.v",
+    "bytes": 3864,
+    "sha256": "b5bf1721ada6de40150d5a0ae2e99aaeb5d86764edc69f9d679ffd37531bb7d2"
+  },
+  {
+    "path": "code/system_application/src/cpu/core/rv32_alu.sv",
+    "bytes": 1580,
+    "sha256": "47e2a54401c1f3aeec1e4f840682dc353b51fa20757634a46acc6134a513bbb6"
+  },
+  {
+    "path": "code/system_application/src/cpu/core/rv32_btb.sv",
+    "bytes": 3043,
+    "sha256": "f467693ecb9bb45b457368b9fc9afad2817494d6d8aa588b1dccf8d8a9afd63b"
+  },
+  {
+    "path": "code/system_application/src/cpu/core/rv32_core.sv",
+    "bytes": 19387,
+    "sha256": "c4f0ef80e634f153f5bf1cb2b0f9bb314432333bf9dc93e1a8e9f6e1c2cc2346"
+  },
+  {
+    "path": "code/system_application/src/cpu/core/rv32_decode.sv",
+    "bytes": 4765,
+    "sha256": "9cb2b57b46ed775d85b6e70a3eebe92c2d5e49e9a6483993109e2c096d9a3ff3"
+  },
+  {
+    "path": "code/system_application/src/cpu/core/rv32_machine.sv",
+    "bytes": 4209,
+    "sha256": "2949b5177e75069bee3597e6025d37e31fbfbde822997254040a728be4eb00f9"
+  },
+  {
+    "path": "code/system_application/src/cpu/core/rv32_muldiv.sv",
+    "bytes": 4773,
+    "sha256": "1079ef43882452422508e2247af93699b357e3eaaf0b3118a8c95e5434457dc5"
+  },
+  {
+    "path": "code/system_application/src/cpu/rv32_cpu_subsys.sv",
+    "bytes": 10914,
+    "sha256": "95b5f337a34ca66216b92089ac9bfcb4a7422641690a494dec2b9daf091f723c"
+  },
+  {
+    "path": "code/system_application/src/ctrl/instrec_top.v",
+    "bytes": 28083,
+    "sha256": "15f0a562920719345b7ec698fa4ff839291fbaabdb2731fc773c823c499d6cf2"
+  },
+  {
+    "path": "code/system_application/src/ctrl/self_test.v",
+    "bytes": 6781,
+    "sha256": "f5f4cf97914865566f7fdec89490b81086ee3f86522bcf376735d664e38eec40"
+  },
+  {
+    "path": "code/system_application/src/ctrl/sys_ctrl.v",
+    "bytes": 11554,
+    "sha256": "be617f7a41a56e47962bfb0cd82c92873e3bc073236a52a525f3f4407badf265"
+  },
+  {
+    "path": "code/system_application/src/ctrl/uart_debug.v",
+    "bytes": 12512,
+    "sha256": "43350e18e14a721612a95b753507bfa2d09889f6d203b2c9d237be5c22925dcd"
+  },
+  {
+    "path": "code/system_application/src/ctrl/uart_rx.v",
+    "bytes": 3106,
+    "sha256": "685242e928637f40f3bd40bcd1fce04e74a5ae40dadcacc88e1468b956e8a0a5"
+  },
+  {
+    "path": "code/system_application/src/ctrl/uart_tx.v",
+    "bytes": 1760,
+    "sha256": "caf216442f45591c580070fa8afbc93fb93ececed226765210bd1d5301f6f86c"
+  },
+  {
+    "path": "code/system_application/src/ctrl/weight_loader.v",
+    "bytes": 13703,
+    "sha256": "784a2a6715f2cadda4cc7f4b11bd7a0cb5b93f07448130a730165a5aa78cddfd"
+  },
+  {
+    "path": "code/system_application/src/ddr3/ddr3_arbiter.v",
+    "bytes": 5051,
+    "sha256": "5fba14b99489b20b618f60f0a461bc4293af181d1ef20ce0ad649729e957852b"
+  },
+  {
+    "path": "code/system_application/src/ddr3/ddr3_ctrl_axi.v",
+    "bytes": 12978,
+    "sha256": "91f297320ac8c31f9e1a651f3b6d0fe02dd49c45770cff21badfad6537c397af"
+  },
+  {
+    "path": "code/system_application/src/ddr3/ddr3_wrapper.v",
+    "bytes": 4897,
+    "sha256": "41d909bd07d471d748a2873faa9c3a54e6b1754e086310b1ed73e7cc0aec984e"
+  },
+  {
+    "path": "code/system_application/src/hdmi/hdmi_tx_if.v",
+    "bytes": 6099,
+    "sha256": "4194f0bc7a86fc064249483fa5ea8084eaeed0ca932db862f74fef528039633c"
+  },
+  {
+    "path": "code/system_application/src/hdmi/iic_dri.v",
+    "bytes": 11415,
+    "sha256": "c767ad43ad5c4602df65096235a47359b3b7bba902ff0f5332922f91b9f2e02e"
+  },
+  {
+    "path": "code/system_application/src/hdmi/ms7200_ctl.v",
+    "bytes": 29176,
+    "sha256": "d313a7e3d173d8d4a13d799962905365958bb82d822194b94e436d300d78ab33"
+  },
+  {
+    "path": "code/system_application/src/hdmi/ms7210_ctl.v",
+    "bytes": 10207,
+    "sha256": "087719260cc484d5934e090b300039e17a85f857b59bb0827b1a1d168bc73d42"
+  },
+  {
+    "path": "code/system_application/src/hdmi/ms72xx_ctl.v",
+    "bytes": 4638,
+    "sha256": "577e7f74d5f328c6eebfa83d15e62886b58704e3421cb8e006befdbfd5d76f8d"
+  },
+  {
+    "path": "code/system_application/src/hdmi/sync_vg.v",
+    "bytes": 2865,
+    "sha256": "96f92059fe89b1785280235a422715bcd1910068576b58245df1dba0ebbb783e"
+  },
+  {
+    "path": "code/system_application/src/mel/db_norm.v",
+    "bytes": 6563,
+    "sha256": "07ea8906adda02a1d1d278fd93fda2eb305069294ea12c2c153d263428fe770f"
+  },
+  {
+    "path": "code/system_application/src/mel/fft2048_sdf.v",
+    "bytes": 12642,
+    "sha256": "db3691fd78f2ef09857089bcb84515e3bc003f2e56c3f74c123a2361f65b871c"
+  },
+  {
+    "path": "code/system_application/src/mel/hann_rom.v",
+    "bytes": 343,
+    "sha256": "a0303bce47009fb9ecc79ad292dfb02b7fe6ce52a9dd85be44280b0bc8247232"
+  },
+  {
+    "path": "code/system_application/src/mel/mel_engine.v",
+    "bytes": 16557,
+    "sha256": "0ba9e5e21b1dd796ac85995edf679155777f22b73d15aa0af5879b2bca7e4573"
+  },
+  {
+    "path": "code/system_application/src/mel/mel_filter.v",
+    "bytes": 12235,
+    "sha256": "2bd9cacf44746c2991b02d5238385dca1c9e71d739b67230ec73a13ddfa8160b"
+  },
+  {
+    "path": "code/system_application/src/mel/standardize.v",
+    "bytes": 10540,
+    "sha256": "c68468ac621639e84653d16f7196e6dcc3f1ac9e945a16eb2c1ac255c6049846"
+  },
+  {
+    "path": "code/system_application/src/mel/stft_framer.v",
+    "bytes": 11539,
+    "sha256": "7283655dbf7f7b4fe5695d5db35d7bdf5dfe192e9fb2e1fae668dde964d9a7d7"
+  },
+  {
+    "path": "code/system_application/src/mel/tw_rom_s.v",
+    "bytes": 390,
+    "sha256": "70030e24c828a7521cfc8a6dac5d6a9e510ab7811cbb7bb8a5aac59d9682031e"
+  },
+  {
+    "path": "code/system_application/src/npu/activation_row_store_dynamic.v",
+    "bytes": 5725,
+    "sha256": "7ffd417b85fad493a76c4673931ff811b46fdb45ffff256b6cf63a39ce8ba767"
+  },
+  {
+    "path": "code/system_application/src/npu/activation_store_mux.v",
+    "bytes": 2891,
+    "sha256": "b7ff3e61fe3bac63f180a47f47821d169d5630255eda700649fcf94194cc902d"
+  },
+  {
+    "path": "code/system_application/src/npu/conv_engine.v",
+    "bytes": 29734,
+    "sha256": "6ffccce55716ebacf544fcc681f9151d99bdc2094d88ce33e5611c9305223c7c"
+  },
+  {
+    "path": "code/system_application/src/npu/fc_engine.v",
+    "bytes": 6226,
+    "sha256": "88e3fec1205b3d564d3b8ab5fa7163b60159016cb4e8eaa519bd2a9fed022de6"
+  },
+  {
+    "path": "code/system_application/src/npu/gap_unit.v",
+    "bytes": 4299,
+    "sha256": "0f1b7c8c6230740c45435a349cd10aea5d12f451e0329b68c9735348ba09798b"
+  },
+  {
+    "path": "code/system_application/src/npu/npu_m1_bridge.v",
+    "bytes": 3979,
+    "sha256": "b79acf67f7426b7d87a40e8cbf9c024bd003dd341055f74612dbd17e201b0a90"
+  },
+  {
+    "path": "code/system_application/src/npu/npu_m1_owner.v",
+    "bytes": 2394,
+    "sha256": "397662c01822c33bb2d5c200e7a6d715c5e0685f942984b01e3cf9985542ffb0"
+  },
+  {
+    "path": "code/system_application/src/npu/npu_stage_lifecycle.v",
+    "bytes": 845,
+    "sha256": "e31196e193c9d54f894e74240ea76dc32e6d977722702dfb0375ba0e926ba101"
+  },
+  {
+    "path": "code/system_application/src/npu/npu_top.v",
+    "bytes": 23334,
+    "sha256": "b73c74637541edfb760fc0974377f2f50303a0a449f91f1fa1977aad4de879d3"
+  },
+  {
+    "path": "code/system_application/src/npu/pool_engine.v",
+    "bytes": 7279,
+    "sha256": "9155741e3075cf8942dac075745ba010d1db6e802eaad1d98289c1b24af91662"
+  },
+  {
+    "path": "code/system_application/src/npu/requant_unit.v",
+    "bytes": 3333,
+    "sha256": "c09596fd3a2d23804f1be025d50735ac8873277fce3b1ccac425fb2ee30d0bff"
+  },
+  {
+    "path": "code/system_application/src/npu/softmax_top.v",
+    "bytes": 9234,
+    "sha256": "73d9d473508862a873ecace131bb4aa052cd12760956fccaac297516447b77dd"
+  },
+  {
+    "path": "code/system_application/src/npu/wbuf.v",
+    "bytes": 3061,
+    "sha256": "167ed6e56eead675f501495c6f0c4db6cc314b0f93bd8a75c0f5a76a0020aba7"
+  },
+  {
+    "path": "code/system_application/src/npu/wdma.v",
+    "bytes": 18890,
+    "sha256": "a8ec13559809f6f681ae830aa573735c11606643fee743ec90a105a490acf205"
+  },
+  {
+    "path": "code/system_application/src/npu/weight_read_aligner_hardened.v",
+    "bytes": 4031,
+    "sha256": "46b6a159b159433c12712b4b50796b190498faa171b147f573b2dc42a06815e4"
+  },
+  {
+    "path": "code/system_application/src/ui/bars_data.v",
+    "bytes": 2690,
+    "sha256": "d84f3fb50240c6d891e695a31267d88c601db4ef9b6ca316cba1c6f0dd8a31ab"
+  },
+  {
+    "path": "code/system_application/src/ui/dashboard_renderer.v",
+    "bytes": 5758,
+    "sha256": "bab23a2e3041aec9ac876879c705966be6b6f7c56f78df8e669478c6491300bf"
+  },
+  {
+    "path": "code/system_application/src/ui/dashboard_text.v",
+    "bytes": 4022,
+    "sha256": "6364690a070fdcde8c0b890b1e16a0ab7bf0a6e8cf10bc4663dc01516cfa9e99"
+  },
+  {
+    "path": "code/system_application/src/ui/feat_copy_engine.v",
+    "bytes": 2334,
+    "sha256": "e617849cafe0890842d5ba9243d46531c93cb66248fe17621219a5bc8ad1c2d9"
+  },
+  {
+    "path": "code/system_application/src/ui/feat_page_buf.v",
+    "bytes": 2186,
+    "sha256": "caade2ea5635238c63a3d4966c616c7520176dbc9f8b57c4c7c7c859e584a9b0"
+  }
+]

@@ -1,0 +1,228 @@
+{
+  "schema": 1,
+  "sets": {
+    "full": {
+      "top_module": "instrec_top",
+      "sources": [
+        "src/*.v",
+        "src/audio/*.v",
+        "src/ddr3/*.v",
+        "src/mel/*.v",
+        "src/npu/*.v",
+        "src/ui/*.v",
+        "src/hdmi/*.v",
+        "src/ctrl/*.v",
+        "src/ip/*.v",
+        "src/cpu/rv32_cpu_subsys.sv",
+        "src/cpu/core/rv32_core.sv",
+        "src/cpu/core/rv32_decode.sv",
+        "src/cpu/core/rv32_alu.sv",
+        "src/cpu/core/rv32_muldiv.sv",
+        "src/cpu/core/rv32_btb.sv",
+        "src/cpu/core/rv32_machine.sv"
+      ],
+      "ip_cores": [
+        "ipcore/pll/pll.idf",
+        "ipcore/pll_audio/pll_audio.idf",
+        "ipcore/ddr3_test/ddr3_test.idf"
+      ],
+      "constraints": [
+        "constraints/instrec_top.fdc",
+        "constraints/ddr3_100h.fdc",
+        "constraints/clock_groups_async.fdc"
+      ],
+      "hex_dirs": [
+        "src/mel",
+        "src/ui",
+        "src/cpu"
+      ]
+    },
+    "ddr3_diag": {
+      "top_module": "top_ddr3_diag",
+      "sources": [
+        "src/ddr3/*.v",
+        "src/ctrl/self_test.v",
+        "src/ctrl/uart_tx.v",
+        "src/diag/diag_uart_report.v",
+        "src/diag/top_ddr3_diag.v"
+      ],
+      "ip_cores": [
+        "ipcore/ddr3_test/ddr3_test.idf"
+      ],
+      "constraints": [
+        "constraints/ddr3_100h.fdc",
+        "constraints/top_ddr3_diag.fdc"
+      ],
+      "hex_dirs": []
+    },
+    "ui_demo": {
+      "top_module": "top_ui_demo",
+      "sources": [
+        "src/ui/*.v",
+        "src/hdmi/*.v",
+        "src/ctrl/uart_tx.v",
+        "src/diag/diag_uart_report.v",
+        "src/diag/top_ui_demo.v"
+      ],
+      "ip_cores": [
+        "ipcore/pll/pll.idf"
+      ],
+      "constraints": [
+        "constraints/top_ui_demo.fdc"
+      ],
+      "hex_dirs": [
+        "src/ui"
+      ]
+    },
+    "conv1_test": {
+      "top_module": "top_npu_conv1_test",
+      "sources": [
+        "src/npu/conv_engine.v",
+        "src/npu/requant_unit.v",
+        "src/ctrl/uart_tx.v",
+        "src/diag/diag_uart_report.v",
+        "src/diag/top_npu_conv1_test.v"
+      ],
+      "ip_cores": [],
+      "constraints": [
+        "constraints/top_npu_conv1_test.fdc"
+      ],
+      "hex_dirs": [
+        "hex_conv1"
+      ]
+    },
+    "mel_test": {
+      "top_module": "top_mel_test",
+      "sources": [
+        "src/mel/*.v",
+        "src/ctrl/uart_tx.v",
+        "src/diag/diag_uart_report.v",
+        "src/diag/top_mel_test.v"
+      ],
+      "ip_cores": [],
+      "constraints": [
+        "constraints/top_mel_test.fdc"
+      ],
+      "hex_dirs": [
+        "src/mel"
+      ]
+    },
+    "core_only": {
+      "top_module": "top_core_only",
+      "sources": [
+        "src/audio/*.v",
+        "src/ddr3/*.v",
+        "src/mel/*.v",
+        "src/npu/*.v",
+        "src/ip/*.v",
+        "src/ctrl/self_test.v",
+        "src/ctrl/sys_ctrl.v",
+        "src/ctrl/uart_debug.v",
+        "src/ctrl/uart_rx.v",
+        "src/ctrl/uart_tx.v",
+        "src/ctrl/weight_loader.v",
+        "src/ctrl/top_core_only.v"
+      ],
+      "ip_cores": [
+        "ipcore/pll_audio/pll_audio.idf",
+        "ipcore/ddr3_test/ddr3_test.idf"
+      ],
+      "constraints": [
+        "constraints/ddr3_100h.fdc",
+        "constraints/top_core_only.fdc"
+      ],
+      "hex_dirs": [
+        "src/mel"
+      ]
+    },
+    "rv_core": {
+      "top_module": "top_rv_core",
+      "sources": [
+        "src/audio/*.v",
+        "src/ddr3/*.v",
+        "src/mel/*.v",
+        "src/npu/*.v",
+        "src/ip/*.v",
+        "src/ctrl/self_test.v",
+        "src/ctrl/sys_ctrl.v",
+        "src/ctrl/uart_debug.v",
+        "src/ctrl/uart_rx.v",
+        "src/ctrl/uart_tx.v",
+        "src/ctrl/weight_loader.v",
+        "src/ctrl/top_rv_core.v",
+        "src/cpu/rv32_cpu_subsys.sv",
+        "src/cpu/core/rv32_core.sv",
+        "src/cpu/core/rv32_decode.sv",
+        "src/cpu/core/rv32_alu.sv",
+        "src/cpu/core/rv32_muldiv.sv",
+        "src/cpu/core/rv32_btb.sv",
+        "src/cpu/core/rv32_machine.sv"
+      ],
+      "ip_cores": [
+        "ipcore/pll_audio/pll_audio.idf",
+        "ipcore/ddr3_test/ddr3_test.idf"
+      ],
+      "constraints": [
+        "constraints/ddr3_100h.fdc",
+        "constraints/top_core_only.fdc"
+      ],
+      "hex_dirs": [
+        "src/mel",
+        "src/cpu"
+      ]
+    },
+    "pcm1808_diag": {
+      "top_module": "top_pcm1808_probe",
+      "sources": [
+        "src/audio/i2s_slave_rx.v",
+        "src/audio/pcm1808_resampler.v",
+        "src/audio/pcm1808_coeff_rom.v",
+        "src/diag/diag_uart_report.v",
+        "src/ctrl/uart_tx.v",
+        "src/diag/top_pcm1808_probe.v"
+      ],
+      "ip_cores": [],
+      "constraints": [
+        "constraints/top_pcm1808_probe.fdc"
+      ],
+      "hex_dirs": []
+    },
+    "emergency_demo": {
+      "top_module": "top_emergency_demo",
+      "sources": [
+        "src/*.v",
+        "src/audio/*.v",
+        "src/ddr3/*.v",
+        "src/mel/*.v",
+        "src/npu/*.v",
+        "src/ui/*.v",
+        "src/hdmi/*.v",
+        "src/ctrl/*.v",
+        "src/ip/*.v",
+        "src/cpu/rv32_cpu_subsys.sv",
+        "src/cpu/core/rv32_core.sv",
+        "src/cpu/core/rv32_decode.sv",
+        "src/cpu/core/rv32_alu.sv",
+        "src/cpu/core/rv32_muldiv.sv",
+        "src/cpu/core/rv32_btb.sv",
+        "src/cpu/core/rv32_machine.sv",
+        "src/diag/top_emergency_demo.v"
+      ],
+      "ip_cores": [
+        "ipcore/pll/pll.idf",
+        "ipcore/pll_audio/pll_audio.idf",
+        "ipcore/ddr3_test/ddr3_test.idf"
+      ],
+      "constraints": [
+        "constraints/instrec_top.fdc",
+        "constraints/ddr3_100h.fdc",
+        "constraints/clock_groups_async.fdc"
+      ],
+      "hex_dirs": [
+        "src/mel",
+        "src/ui",
+        "src/cpu"
+      ]
+    }
+  }
+}

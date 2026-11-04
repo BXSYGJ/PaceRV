@@ -1,0 +1,43 @@
+{
+  "num_classes": 8,
+  "names": [
+    "clarinet",
+    "distorted electric guitar",
+    "female singer",
+    "flute",
+    "piano",
+    "tenor saxophone",
+    "trumpet",
+    "violin"
+  ],
+  "name_zh": [
+    "单簧管",
+    "失真电吉他",
+    "女声",
+    "长笛",
+    "钢琴",
+    "次中音萨克斯",
+    "小号",
+    "小提琴"
+  ],
+  "id_to_name": {
+    "0": "clarinet",
+    "1": "distorted electric guitar",
+    "2": "female singer",
+    "3": "flute",
+    "4": "piano",
+    "5": "tenor saxophone",
+    "6": "trumpet",
+    "7": "violin"
+  },
+  "id_to_name_zh": {
+    "0": "单簧管",
+    "1": "失真电吉他",
+    "2": "女声",
+    "3": "长笛",
+    "4": "钢琴",
+    "5": "次中音萨克斯",
+    "6": "小号",
+    "7": "小提琴"
+  }
+}

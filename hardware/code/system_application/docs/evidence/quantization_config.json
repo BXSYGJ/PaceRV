@@ -1,0 +1,48 @@
+{
+  "quant_method": "static",
+  "quant_engine": "fbgemm",
+  "dtype": "qint8",
+  "weight_quant": "per_channel_symmetric",
+  "activation_quant": "per_tensor_affine",
+  "n_calibration_samples": 500,
+  "n_quantized_layers": 6,
+  "fuse_modules": [
+    [
+      "conv1",
+      "bn1",
+      "relu1"
+    ],
+    [
+      "conv2",
+      "bn2",
+      "relu2"
+    ],
+    [
+      "conv3",
+      "bn3",
+      "relu3"
+    ],
+    [
+      "conv4",
+      "bn4",
+      "relu4"
+    ],
+    [
+      "fc1",
+      "relu_fc"
+    ]
+  ],
+  "fp32_test_accuracy": 0.7783589408303367,
+  "int8_test_accuracy": 0.773700555737169,
+  "accuracy_drop": 0.004658385093167738,
+  "fp32_macro_f1": 0.7067171383197421,
+  "int8_macro_f1": 0.6955134399606244,
+  "macro_f1_drop": 0.01120369835911772,
+  "args": {
+    "checkpoint": "runs/best_model.pt",
+    "cache_dir": "data/cache",
+    "batch_size": 64,
+    "num_calibration_samples": 500,
+    "quant_method_requested": "static"
+  }
+}

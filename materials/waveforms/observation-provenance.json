@@ -1,0 +1,122 @@
+[
+  {
+    "release": "Original_155250",
+    "origin": "LOCAL RTL SIMULATION",
+    "configured_fpga_clock_hz": 155250000,
+    "axis": "sampled CPU edge index",
+    "hardware_validated": false,
+    "complete_coremark_run": false,
+    "firmware_sha256": "1d66bdd8919951e18c191b82ea271c84bd156ea14f2ca9fcf5c4b56216069949",
+    "original_manifest_sha256": "1701f6f5942e2c3eb9f7ada8d73622945c49d8a3162739fb885ec8448076e060",
+    "exported_files": [
+      {
+        "path": "Original_155250/core_bench_list.csv",
+        "sha256": "3d20d97b19778ef7d6e5df29d350e43a3d5fe6e34218948afaaaa6878e2d31a7"
+      },
+      {
+        "path": "Original_155250/core_bench_list.decoded.csv",
+        "sha256": "8f0e324e9287c246c288fc657bb62af3eaed64b759adbe614da96de071a312bf"
+      },
+      {
+        "path": "Original_155250/analysis/core_bench_list/full1024.png",
+        "sha256": "83d9d8eb327c94e093b7f89678435dd8801f3370a457fd059a608c7606a685f9"
+      },
+      {
+        "path": "Original_155250/analysis/core_bench_list/trigger-zoom.png",
+        "sha256": "0433537849ed4c535149314c60e1c9cf243e903077ad162f94c150c93570e9a7"
+      },
+      {
+        "path": "Original_155250/core_bench_matrix.csv",
+        "sha256": "9c632e314ded2284b9527791e476bee3dd36b84abf055f1c9bea93775557a79e"
+      },
+      {
+        "path": "Original_155250/core_bench_matrix.decoded.csv",
+        "sha256": "4d69e3a66b07429b8ef33484800682b563888d328e7374b3b4d5ccc9ffeb3c00"
+      },
+      {
+        "path": "Original_155250/analysis/core_bench_matrix/full1024.png",
+        "sha256": "df2bae36c5a6d15e828b37f76b966939ceefba802fa053cffec5fb8234569c2b"
+      },
+      {
+        "path": "Original_155250/analysis/core_bench_matrix/trigger-zoom.png",
+        "sha256": "40684072d3832f757e70277efa311b9c160850c64b85cd43b0c7e6ce9cd72eac"
+      },
+      {
+        "path": "Original_155250/core_bench_state.csv",
+        "sha256": "c5cedc1961733611dc51ccc6e5e23820cc0b566c8c6c59fe51f04bb3ba30dd1a"
+      },
+      {
+        "path": "Original_155250/core_bench_state.decoded.csv",
+        "sha256": "97200963899777e62b81ddd83c886d7ab8c11ff1db87dfb39cffd5a75d5a9df7"
+      },
+      {
+        "path": "Original_155250/analysis/core_bench_state/full1024.png",
+        "sha256": "c848a4e3d2d68b202cfde009b850244d6dc2dfaf66224f0751cba2d1ba5660bf"
+      },
+      {
+        "path": "Original_155250/analysis/core_bench_state/trigger-zoom.png",
+        "sha256": "dfcf229d9422d935bb8d754f08e972731dc38c07d67e629de8b19909923ae12c"
+      }
+    ]
+  },
+  {
+    "release": "H3_Base_145125",
+    "origin": "LOCAL RTL SIMULATION",
+    "configured_fpga_clock_hz": 145125000,
+    "axis": "sampled CPU edge index",
+    "hardware_validated": false,
+    "complete_coremark_run": false,
+    "firmware_sha256": "3a3aff510511ed4cd7fe304a6354861adae30531102446a24438e43f3e2a2884",
+    "original_manifest_sha256": "a2779ce12ebb802eca27fb5c4f23ff4d0eceb4f72212c5e399b07e8aae5fed12",
+    "exported_files": [
+      {
+        "path": "H3_Base_145125/core_bench_list.csv",
+        "sha256": "682ea0d6265e1d0186d9dcf40c49222176c829618f413b6bed2f3da01420ad92"
+      },
+      {
+        "path": "H3_Base_145125/core_bench_list.decoded.csv",
+        "sha256": "447a440edf1ff715fc066e522ded982bbafc7390c32ec6e4001506a6315c5c80"
+      },
+      {
+        "path": "H3_Base_145125/analysis/core_bench_list/full1024.png",
+        "sha256": "f541bd62738a1cf1ea5e5d7bca0f038697061c8b66f5efcef8bfacffc85349f7"
+      },
+      {
+        "path": "H3_Base_145125/analysis/core_bench_list/trigger-zoom.png",
+        "sha256": "e933d9f8c392229dff10261e3a1a4e3fdb611f6222d8b766dc886bd546bcaf88"
+      },
+      {
+        "path": "H3_Base_145125/core_bench_matrix.csv",
+        "sha256": "7244cc3f9e6aa9df1a737786c50436a7026c4806b7988a74ea0063bd7c8430f8"
+      },
+      {
+        "path": "H3_Base_145125/core_bench_matrix.decoded.csv",
+        "sha256": "a8299ecc250dddb5793363a2b51d0e31e5b13497f9078d9503e60d681a742213"
+      },
+      {
+        "path": "H3_Base_145125/analysis/core_bench_matrix/full1024.png",
+        "sha256": "1520ad405286153535211ed161ea117a1a76438c3151a9c40906baaf2dbd168c"
+      },
+      {
+        "path": "H3_Base_145125/analysis/core_bench_matrix/trigger-zoom.png",
+        "sha256": "a5b7158759f5883cc09efb3edade414134a547affa404b2bdff986cde2e8a763"
+      },
+      {
+        "path": "H3_Base_145125/core_bench_state.csv",
+        "sha256": "8d2824816f55d705e3a5662f198b5ee1fbd0656deff421c47614fb60d1410816"
+      },
+      {
+        "path": "H3_Base_145125/core_bench_state.decoded.csv",
+        "sha256": "ac2f8ac917a4736f86376b43c9fca99a9059e2faea755ab4d56147a72e51d0bd"
+      },
+      {
+        "path": "H3_Base_145125/analysis/core_bench_state/full1024.png",
+        "sha256": "5955cb6d91c50231a891c734cbda3bb901f71842ef4999a5b14292b1a4f828a4"
+      },
+      {
+        "path": "H3_Base_145125/analysis/core_bench_state/trigger-zoom.png",
+        "sha256": "a6f238da9d050f2ee92ff2bc1b5a95e87eb5de74cad7e71fde393f68404017e9"
+      }
+    ]
+  }
+]

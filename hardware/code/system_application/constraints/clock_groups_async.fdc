@@ -1,0 +1,18 @@
+### Cross-clock-domain asynchronous groups, InstRec-FPGA M0 (T-M0-09).
+### This file is loaded AFTER ddr3_100h.fdc (see scripts/build_full.tcl):
+### every clock referenced here is already created either by
+### instrec_top.fdc (clk / pix_clk) or by ddr3_100h.fdc
+### (ref_clk / rst_clk / ddrphy_sysclk / phy_dq_*). Loading groups that
+### name not-yet-created clocks makes PDS ignore the whole command
+### (SDC-2027), which is why these statements cannot live in
+### instrec_top.fdc (loaded first).
+###
+### Covered CDC paths (design doc section 1.4):
+###   clk      <-> ddrphy_sysclk : audio_cdc_fifo dual-clock FIFO
+###   pix_clk  <-> ddrphy_sysclk : audio_sink vsync/wave-status 2FF
+###   cfg_clk  <-> ddrphy_sysclk: hdmi_init_over/fail -> sys_ctrl 2FF
+###   cfg_clk  <-> pix_clk      : hdmi_tx_if internal cfg/pix handoff
+### The 10 MHz cfg clock is inferred by PDS from the demo GPLL clkout1
+### (full hierarchical name used below).
+
+set_clock_groups -asynchronous -group [get_clocks {clk}] -group [get_clocks {pix_clk}] -group [get_clocks {cfg_clk}] -group [get_clocks {ref_clk}] -group [get_clocks {rst_clk}] -group [get_clocks {ddrphy_sysclk}] -group [get_clocks {phy_dq_clk_0}] -group [get_clocks {phy_dq_sysclk_0}] -group [get_clocks {phy_dq_clk_1}] -group [get_clocks {phy_dq_sysclk_1}]

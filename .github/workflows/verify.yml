@@ -1,0 +1,18 @@
+name: Verify competition source
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  portable-source:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -r hardware/requirements.txt
+      - name: Verify source hashes and dependencies
+        run: python hardware/tools/verify_package.py
+      - name: Prepare all 13 project configurations
+        run: python scripts/verify_release.py
+      - name: Protocol and computation regression
+        working-directory: hardware/code/system_application
+        run: python -m pytest -q tests/test_pcm1808.py tests/test_weight_upload.py tests/test_uart_frames.py tests/test_requant_model.py tests/test_pool_gap_model.py tests/test_npu_stream_model.py

@@ -1,0 +1,4 @@
+input wire clk,input wire db_active,std_active,ex_active,run_active,mel_valid,db_wr_en,std_feat_wr_en,
+input wire [14:0] db_spec_rd_addr,std_db_rd_addr,ex_rd_addr,db_wr_addr,std_feat_wr_addr,
+input wire [13:0] feat_rd_addr,input wire [8:0] frm_out,input wire [5:0] mel_ch,
+input wire [15:0] mel_q88,db_wr_data,input wire [7:0] std_feat_wr_data,output wire [15:0] result

@@ -1,0 +1,83 @@
+{
+  "task": "5-group dual-head training (activity BCE + dominance softmax-CE)",
+  "model": "DualHeadInstrumentCNN",
+  "model_class": "src.model.DualHeadInstrumentCNN",
+  "epochs": 60,
+  "batch_size": 64,
+  "lr": 0.001,
+  "lr_min": 1e-05,
+  "weight_decay": 0.0001,
+  "dropout": 0.3,
+  "dom_weight": 0.5,
+  "time_mask": 40,
+  "freq_mask": 12,
+  "seed": 42,
+  "device": "cuda",
+  "num_classes": 5,
+  "n_frames": 130,
+  "window_sec": 1.509297052154195,
+  "n_params": 719018,
+  "n_train": 35185,
+  "n_val": 8906,
+  "pos_weight": [
+    0.5997544527053833,
+    0.999602198600769,
+    2.6280677318573,
+    50.0,
+    3.2112507820129395
+  ],
+  "pos_weight_cap": 50.0,
+  "group_names": [
+    "strings",
+    "woodwinds",
+    "brass",
+    "percussion",
+    "keys"
+  ],
+  "group_names_zh": [
+    "弦乐",
+    "木管",
+    "铜管",
+    "打击乐",
+    "键盘/拨弦"
+  ],
+  "group_distribution_train": {
+    "0": 21994,
+    "1": 17596,
+    "2": 9698,
+    "3": 157,
+    "4": 8355
+  },
+  "dominance_preprocess_train": {
+    "n_mask1_in": 31299,
+    "n_degenerate_rows_dropped": 669,
+    "n_rows_target_adjusted": 1329
+  },
+  "dominance_preprocess_val": {
+    "n_mask1_in": 7934,
+    "n_degenerate_rows_dropped": 97,
+    "n_rows_target_adjusted": 130
+  },
+  "dominance_train_mask1": 30630,
+  "dominance_val_mask1": 7837,
+  "warm_start": "runs/group5_v2/best_model.pth",
+  "best_epoch": 22,
+  "best_subset_acc": 0.7539860768021559,
+  "best_dom_mae": 0.05865895748138428,
+  "ran_epochs": 42,
+  "total_time_sec": 7432.07168340683,
+  "avg_epoch_time_sec": 176.9540877001626,
+  "optimizer": "AdamW",
+  "scheduler": "CosineAnnealingLR(T_max=60, eta_min=1e-05)",
+  "criterion_activity": "BCEWithLogitsLoss(pos_weight=n_neg/n_pos)",
+  "criterion_dominance": "softmax CE on mask=1 rows (targets zeroed on inactive groups, renormalized)",
+  "specaugment": true,
+  "use_amp": false,
+  "num_workers": 0,
+  "cache_dir": "data\\group5_cache_v3",
+  "v2_baseline": {
+    "val_sub": 0.7064,
+    "macro_f1": 0.8832,
+    "map": 0.9355
+  }
+}
