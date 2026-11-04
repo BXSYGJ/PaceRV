@@ -23,7 +23,7 @@
 | 构建、烧录与测量 | [100Pro+ 使用说明](hardware/docs/BUILD_AND_RUN.md) |
 | 验证结果 | [源码包检查记录](hardware/docs/PACKAGE_STATUS.md) · [机器可读结果](hardware/docs/validation/results.json) |
 | 实物照片与观测波形 | [完整系统与开发板](materials/photos/) · [CPU 仿真波形与 CSV](materials/waveforms/) |
-| 学术成果与源仓库 | [论文与开源说明](docs/PROJECT_ORIGIN.md) |
+| 学术成果 | [论文与研究材料](https://github.com/BXSYGJ/PaceRV-MCSoC2026) |
 
 ## 处理器与完整系统
 
@@ -53,10 +53,9 @@ pwsh -File tools/Build-PDS.ps1 -Project application_full -StopAfter compile
 
 PDS 路径、完整位流构建、JTAG 下载、CPU 串口计数、音频模型加载与独立诊断工程均见[详细使用说明](hardware/docs/BUILD_AND_RUN.md)。CPU 性能工程使用 **9,600 baud**；音频应用使用 **115,200 baud**。
 
-## 仓库分工
+## 开源与学术成果
 
 - **本仓库 PaceRV**：本次 FPGA 竞赛的评审与交付入口，集中源码、工程配置、技术报告、PPT、海报和使用说明。
-- **[ZGTC_RISC_CPU](https://github.com/BXSYGJ/ZGTC_RISC_CPU)**：团队源仓库，保留 CPU 与音频系统开发分支；[来源与分支对应](docs/PROJECT_ORIGIN.md)。
 - **[PaceRV-MCSoC2026](https://github.com/BXSYGJ/PaceRV-MCSoC2026)**：相关论文的复现实验材料。
 
 <p align="center"><img src="docs/images/poster-preview.png" width="760" alt="PaceRV 作品海报：处理器、音频系统、性能与学术成果" /></p>
